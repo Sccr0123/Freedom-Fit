@@ -1,8 +1,8 @@
-const db = require('./connection');
-const { User, Course, Category } = require('../models');
+const db = require("../config/connection");
+const { User, Course, Category } = require("../models");
 
-db.once('open', async () => {
-  /* await Category.deleteMany();
+db.once("open", async () => {
+	/* await Category.deleteMany();
 
   const categories = await Category.insertMany([
     { name: 'Physical Fitness' },
@@ -44,40 +44,40 @@ db.once('open', async () => {
   console.log('courses seeded');
 */
 
-  await User.deleteMany();
+	await User.deleteMany();
 
-  await User.create({
-    firstName: 'Pamela',
-    lastName: 'Washington',
-    email: 'pamela@testmail.com',
-    password: 'password12345',
-    /*orders: [
+	await User.create({
+		firstName: "Pamela",
+		lastName: "Washington",
+		email: "pamela@testmail.com",
+		password: "password12345",
+		/*orders: [
       {
         courses: [courses[0]._id]
       }
     ]*/
-  });
+	});
 
-  await User.create({
-    firstName: 'Elijah',
-    lastName: 'Holt',
-    email: 'eholt@testmail.com',
-    password: 'password12345'
-  });
+	await User.create({
+		firstName: "Elijah",
+		lastName: "Holt",
+		email: "eholt@testmail.com",
+		password: "password12345",
+	});
 
-  await User.create({
-    firstName: 'Mister',
-    lastName: 'Tester',
-    email: 'test@tester.com',
-    password: '1234567890',
-    /*orders: [
+	await User.create({
+		firstName: "Mister",
+		lastName: "Tester",
+		email: "test@tester.com",
+		password: "1234567890",
+		/*orders: [
       {
         courses: [courses[0]._id, courses[1]._id, courses[2]._id]
       }
     ]*/
-  });
+	});
 
-  console.log('users seeded');
+	console.log("users seeded");
 
-  process.exit();
+	process.exit();
 });

@@ -4,7 +4,12 @@ const { User } = require("../models");
 const resolver = {
 	Query: {
 		users: async () => {
-			return User.find().sort({ createdAt: -1 });
+			const users = User.find().sort({ createdAt: -1 });
+			return users;
+		},
+		user: async (parent, { _id }) => {
+			const user = User.findOne({ _id });
+			return user;
 		},
 	},
 	Mutation: {
@@ -14,3 +19,5 @@ const resolver = {
 		},
 	},
 };
+
+module.exports = resolver;
