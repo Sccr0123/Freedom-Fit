@@ -2,7 +2,7 @@ const db = require("../config/connection");
 const { User, Course, Category } = require("../models");
 
 db.once("open", async () => {
-	/* await Category.deleteMany();
+	await Category.deleteMany();
 
   const categories = await Category.insertMany([
     { name: 'Physical Fitness' },
@@ -10,7 +10,7 @@ db.once("open", async () => {
     { name: 'Mental Wellness' }
   ]);
 
-  console.log('categories seeded');
+  console.log('Categories seeded');
 
   await Course.deleteMany();
 
@@ -41,8 +41,7 @@ db.once("open", async () => {
     }
   ]);
 
-  console.log('courses seeded');
-*/
+  console.log('Courses Seeded');
 
 	await User.deleteMany();
 
@@ -77,7 +76,7 @@ db.once("open", async () => {
     ]*/
 	});
 
-	console.log("users seeded");
+	console.log("Users Seeded");
 
 	process.exit();
 });

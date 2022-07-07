@@ -1,5 +1,5 @@
 const { AuthenticationError } = require("apollo-server-express");
-const { User } = require("../models");
+const { Order, User } = require("../models");
 
 const resolver = {
 	Query: {
@@ -7,6 +7,14 @@ const resolver = {
 			const userData = await User.findOne({}).select("-__v -password");
 
 			return userData;
+		},
+		order: async (parent, { _id }) => {
+			const order = Order.findOne({ _id });
+			return order;
+		},
+		orders: async () => {
+			const orders = Order.find().sort({ createdAt: -1 });
+			return orders;
 		},
 		user: async (parent, { _id }) => {
 			const user = User.findOne({ _id });
