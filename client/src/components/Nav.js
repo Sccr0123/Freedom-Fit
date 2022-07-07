@@ -3,11 +3,9 @@ import { Link } from "react-router-dom";
 
 function Nav() {
 	return (
-		<header className="flex-row px-1 p-3 justify-space-between bg-danger text-light">
-			<span>
+		<header className="d-flex px-1 p-3 justify-content-between align-items-center bg-danger text-light px-3">
 				<h1>Freedom Fit</h1>
-				Login
-			</span>
+				<span>Login</span>
 		</header>
 	);
 }
