@@ -1,19 +1,50 @@
 const { AuthenticationError } = require("apollo-server-express");
-const { User } = require("../models");
+const { Category, Course, Order, User } = require("../models");
+const { populate } = require("../models/User");
 
 const resolver = {
 	Query: {
+		categories: async () => {
+			const categories = Category.find().sort({ createdAt: -1 });
+			return categories;
+		},
+		courses: async () => {
+			const courses = Course.find().sort({ createdAt: -1 });
+			return courses;
+		},
 		me: async (parent, args) => {
 			const userData = await User.findOne({}).select("-__v -password");
 
 			return userData;
 		},
+		order: async (parent, { _id }) => {
+			const order = Order.findOne({ _id }).populate("products");
+			return order;
+		},
+		orders: async () => {
+			const orders = Order.find()
+				.sort({ createdAt: -1 })
+				.populate("products");
+			return orders;
+		},
 		user: async (parent, { _id }) => {
-			const user = User.findOne({ _id });
+			const user = User.findOne({ _id }).populate({
+				path: "orders",
+				populate: {
+					path: "products",
+				},
+			});
 			return user;
 		},
 		users: async () => {
-			const users = User.find().sort({ createdAt: -1 });
+			const users = User.find()
+				.sort({ createdAt: -1 })
+				.populate({
+					path: "orders",
+					populate: {
+						path: "products",
+					},
+				});
 			return users;
 		},
 	},
@@ -22,6 +53,11 @@ const resolver = {
 			const user = await User.create(args);
 			return { user };
 		},
+		addOrder: async (parent, { products }) => {
+			const order = await User.create({ products });
+			return { order };
+		},
+		login: async (parent, args, context) => {},
 	},
 };
 
