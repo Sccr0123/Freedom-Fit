@@ -7,6 +7,7 @@ const typeDefs = gql`
 	}
 
 	type Category {
+		_id: ID
 		name: String
 	}
 
@@ -29,14 +30,16 @@ const typeDefs = gql`
 		firstName: String
 		lastName: String
 		email: String
+		orders: [Order]
 	}
 
 	type Query {
 		categories: [Category]
+		courses: [Course]
 		me: User
 		order(_id: ID!): Order
 		orders: [Order]
-		user: User
+		user(_id: ID!): User
 		users: [User]
 	}
 
