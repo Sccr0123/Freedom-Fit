@@ -19,14 +19,22 @@ const Header = () => {
 					<h1>Freedom Fit</h1>
 				</Link>
 
-				<nav>
-					<Link to="/about">About</Link>
-					<Link to="/courses">Courses</Link>
-					<Cart />
+				<nav className="d-flex">
+					<div>
+						<Link to="/about">About</Link>
+					</div>
+
+					<div>
+						<Link to="/courses">Courses</Link>
+					</div>
 					{/* <Link to="/cart"></Link> */}
-					<Link to="/login">Login</Link>
-					<Link to="/signup">Signup</Link>
-					
+					<div>
+						<Link to="/login">Login</Link>
+					</div>
+					<div>
+						<Link to="/signup">Signup</Link>
+					</div>
+					<Cart />
 				</nav>
 			</div>
 		</header>
