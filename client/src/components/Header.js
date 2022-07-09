@@ -1,8 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { capitalizeFirstLetter } from "../utils/helpers";
-
-// import Auth from "../../utils/auth";
+import { capitalizeFirstLetter, idbPromise } from "../utils/helpers";
+import Cart from "../components/Cart";
 
 // const Navigation = () => {
 //   const logout = (event) => {
@@ -18,12 +17,22 @@ const Header = () => {
           <h1>FreedomFit</h1>
         </Link>
 
-        <nav>
-          <Link to="/about">About</Link>
-          <Link to="/courses">Courses</Link>
-          <Link to="/cart">Cart</Link>
-          <Link to="/login">Login</Link>
-          <Link to="/signup">Signup</Link>
+        <nav className="d-flex">
+          <div>
+            <Link to="/about">About</Link>
+          </div>
+
+          <div>
+            <Link to="/courses">Courses</Link>
+          </div>
+          {/* <Link to="/cart"></Link> */}
+          <div>
+            <Link to="/login">Login</Link>
+          </div>
+          <div>
+            <Link to="/signup">Signup</Link>
+          </div>
+          <Cart />
         </nav>
       </div>
     </header>
