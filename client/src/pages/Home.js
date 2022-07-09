@@ -1,6 +1,9 @@
 import { React } from "react";
+import { Link } from "react-router-dom";
 import "react-bootstrap";
 import imgPlateWeights from "../assets/images/plate_weights.jpg";
+import AboutImage from "../assets/images/about.jpg";
+import HighFive from "../assets/images/highfive.jpg";
 
 const Home = () => {
   return (
@@ -18,21 +21,18 @@ const Home = () => {
               <div className="card card-01">
                 <img
                   className="card-img-top"
-                  src={imgPlateWeights}
-                  alt="Card image cap"
+                  src={AboutImage}
+                  alt="Two people in athletic gear"
                 />
                 <div className="card-body">
                   <span className="badge-box">
                     <i className="fa fa-check"></i>
                   </span>
-                  <h4 className="card-title">Card title</h4>
-                  <p className="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                  <a href="#" className="btn btn-default text-uppercase">
+                  <h4 className="card-title">About</h4>
+                  <p className="card-text">Learn about our team.</p>
+                  <Link to="/about" className="btn btn-default text-uppercase">
                     Explore
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -42,20 +42,20 @@ const Home = () => {
                 <img
                   className="card-img-top"
                   src={imgPlateWeights}
-                  alt="Card image cap"
+                  alt="Plate weights on ground"
                 />
                 <div className="card-body">
                   <span className="badge-box">
                     <i className="fa fa-check"></i>
                   </span>
-                  <h4 className="card-title">Card title</h4>
-                  <p className="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                  <a href="#" className="btn btn-default text-uppercase">
+                  <h4 className="card-title">Courses</h4>
+                  <p className="card-text">Check out our course offerings.</p>
+                  <Link
+                    to="/courses"
+                    className="btn btn-default text-uppercase"
+                  >
                     Explore
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -64,21 +64,18 @@ const Home = () => {
               <div className="card card-01">
                 <img
                   className="card-img-top"
-                  src={imgPlateWeights}
-                  alt="Card image cap"
+                  src={HighFive}
+                  alt="Two people exercising"
                 />
                 <div className="card-body">
                   <span className="badge-box">
                     <i className="fa fa-check"></i>
                   </span>
-                  <h4 className="card-title">Card title</h4>
-                  <p className="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                  <a href="#" className="btn btn-default text-uppercase">
+                  <h4 className="card-title">Cart</h4>
+                  <p className="card-text">Found your fit? Check out here.</p>
+                  <Link to="/cart" className="btn btn-default text-uppercase">
                     Explore
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

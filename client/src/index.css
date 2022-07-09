@@ -66,7 +66,7 @@ nav a:hover {
   border-radius: 10px;
   background-image: linear-gradient(
     180deg,
-    rgba(0, 82, 165, 0.75),
+    rgba(0, 82, 165, 1),
     rgba(0, 82, 165, 0.4)
   ) !important;
   background-color: currentColor;
@@ -97,6 +97,16 @@ section {
 p {
   color: var(--patriotic-black);
 }
+
+.card-title {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.card-text {
+  font-size: 21px;
+}
+
 .card:hover {
   transform: scale(1.05);
   transition: all 1s ease;
@@ -105,6 +115,11 @@ p {
 .card-01 .card-body {
   position: relative;
   padding-top: 40px;
+  background-image: linear-gradient(
+    180deg,
+    rgba(187, 187, 187, 0.2),
+    rgba(187, 187, 187, 0.9)
+  ) !important;
 }
 .card-01 .badge-box {
   position: absolute;
