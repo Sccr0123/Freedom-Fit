@@ -1,11 +1,13 @@
 /* Font Imports */
 @import url("https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700");
 
 :root {
   --patriotic-blue: #0052a5;
   --patriotic-white: #f4f7f5;
   --patriotic-red: #e0162b;
+  --patriotic-black: #212121;
 }
 
 body {
@@ -73,3 +75,54 @@ nav a:hover {
 .home h2 {
   font-weight: bold;
 }
+
+/*CARD CSS START*/
+section {
+  margin: 30px;
+}
+.btn-default {
+  background: var(--patriotic-blue);
+  width: 100%;
+  color: var(--patriotic-white) !important;
+  font-weight: 700;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
+  font-size: 14px;
+}
+.card {
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.3);
+  border: none;
+  margin-bottom: 30px;
+}
+.card h4,
+p {
+  color: var(--patriotic-black);
+}
+.card:hover {
+  transform: scale(1.05);
+  transition: all 1s ease;
+  z-index: 999;
+}
+.card-01 .card-body {
+  position: relative;
+  padding-top: 40px;
+}
+.card-01 .badge-box {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  margin-left: -50px;
+  text-align: center;
+}
+.card-01 .badge-box i {
+  background: var(--patriotic-blue);
+  color: var(--patriotic-white);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-size: 20px;
+}
+/*CARD CSS END*/
