@@ -2,12 +2,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@300&display=swap");
 
+:root {
+  --patriotic-blue: #0052a5;
+  --patriotic-white: #f4f7f5;
+  --patriotic-red: #e0162b;
+}
+
 body {
   margin: 0;
   font-family: "Saira Condensed", sans-serif, color;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #f4f7f5;
+  color: var(--patriotic-white);
 }
 
 code {
@@ -15,38 +21,41 @@ code {
     monospace;
 }
 
-h1 {
+.header-cont h1 {
   font-family: "Rock Salt", cursive;
-  color: #f4f7f5;
-  text-decoration: none;
+  color: var(--patriotic-white);
 }
 
 header {
-  background-color: #e0162b;
+  background-color: var(--patriotic-red);
 }
 
 nav {
-  text-align: right;
-  width: 100%;
-  justify-content: center;
-  font: bolder;
   font-size: 20px;
-  color: #f4f7f5;
+  color: var(--patriotic-white);
 }
 
 nav a {
-  padding: 6px 10px;
-  margin: 0 15px;
+  font-size: xx-large;
   transition: all 0.2s;
-  color: #f4f7f5;
+  color: var(--patriotic-white);
   text-decoration: none;
 }
 
 nav a:hover {
-  color: blue;
+  color: var(--patriotic-blue);
+  text-decoration: underline;
+}
+
+.header-cont a {
+  text-decoration: none;
+}
+
+.header-cont a:hover {
+  color: var(--patriotic-blue);
   text-decoration: underline;
 }
 
 .home {
-  background-color: #0052a5;
+  background-color: var(--patriotic-blue);
 }
