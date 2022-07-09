@@ -1,9 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import { capitalizeFirstLetter, idbPromise } from "../utils/helpers";
 import Cart from "../components/Cart";
-
-// import { capitalizeFirstLetter } from "../utils/helpers";
 
 // const Navigation = () => {
 //   const logout = (event) => {
