@@ -21,13 +21,17 @@ code {
     monospace;
 }
 
-.header-cont h1 {
+h1 {
   font-family: "Rock Salt", cursive;
   color: var(--patriotic-white);
 }
 
 header {
-  background-color: var(--patriotic-red);
+  background-image: linear-gradient(
+    180deg,
+    rgba(224, 22, 43, 1),
+    rgba(224, 22, 43, 0.85)
+  ) !important;
 }
 
 nav {
@@ -57,5 +61,15 @@ nav a:hover {
 }
 
 .home {
-  background-color: var(--patriotic-blue);
+  border-radius: 10px;
+  background-image: linear-gradient(
+    180deg,
+    rgba(0, 82, 165, 0.75),
+    rgba(0, 82, 165, 0.4)
+  ) !important;
+  background-color: currentColor;
+}
+
+.home h2 {
+  font-weight: bold;
 }
