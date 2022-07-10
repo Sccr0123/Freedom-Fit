@@ -10,33 +10,33 @@ import Cart from "../components/Cart";
 //   };
 
 const Header = () => {
-	return (
-		<header className="bg-danger mb-4 py-2 flex-row align-center">
-			<div className="container flex-row justify-space-between-lg justify-center align-center">
-				<Link to="/">
-					<h1>Freedom Fit</h1>
-				</Link>
+  return (
+    <header className="mb-4 py-2 flex-row align-center">
+      <div className="d-flex justify-content-between px-4 header-cont">
+        <Link to="/" className="p-3">
+          <h1>FreedomFit</h1>
+        </Link>
 
-				<nav className="d-flex">
-					<div>
-						<Link to="/about">About</Link>
-					</div>
+        <nav className="d-flex">
+          <div className="p-3">
+            <Link to="/about">About</Link>
+          </div>
 
-					<div>
-						<Link to="/courses">Courses</Link>
-					</div>
-					{/* <Link to="/cart"></Link> */}
-					<div>
-						<Link to="/login">Login</Link>
-					</div>
-					<div>
-						<Link to="/signup">Signup</Link>
-					</div>
-					<Cart />
-				</nav>
-			</div>
-		</header>
-	);
+          <div className="p-3">
+            <Link to="/courses">Courses</Link>
+          </div>
+          {/* <Link to="/cart"></Link> */}
+          <div className="p-3">
+            <Link to="/login">Login</Link>
+          </div>
+          <div className="p-3">
+            <Link to="/signup">Signup</Link>
+          </div>
+          <Cart />
+        </nav>
+      </div>
+    </header>
+  );
 };
 
 export default Header;
