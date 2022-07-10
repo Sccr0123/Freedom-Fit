@@ -26,6 +26,7 @@ code {
 h1 {
   font-family: "Rock Salt", cursive;
   color: var(--patriotic-white);
+  font-weight: 600;
 }
 
 header {
@@ -62,7 +63,8 @@ nav a:hover {
   text-decoration: underline;
 }
 
-.home {
+.home,
+.about {
   border-radius: 10px;
   background-image: linear-gradient(
     180deg,
@@ -72,8 +74,13 @@ nav a:hover {
   background-color: currentColor;
 }
 
-.home h2 {
+.home h2,
+.about h2 {
   font-weight: bold;
+}
+
+.about-img {
+  height: 200px;
 }
 
 /*CARD CSS START*/

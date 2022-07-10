@@ -32,7 +32,7 @@ const Home = () => {
                   </span>
                   <h4 className="card-title">About</h4>
                   <p className="card-text">Learn about our team.</p>
-                  <Link to="/" className="btn btn-default text-uppercase">
+                  <Link to="/about" className="btn btn-default text-uppercase">
                     Explore
                   </Link>
                 </div>
