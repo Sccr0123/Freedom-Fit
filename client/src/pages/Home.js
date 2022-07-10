@@ -1,6 +1,8 @@
 import { React } from "react";
 import { Link } from "react-router-dom";
 import "react-bootstrap";
+
+// import images
 import imgPlateWeights from "../assets/images/plate_weights.jpg";
 import AboutImage from "../assets/images/about.jpg";
 import HighFive from "../assets/images/highfive.jpg";
@@ -15,9 +17,9 @@ const Home = () => {
         </div>
       </div>
       <section>
-        <div class="container">
-          <div class="row">
-            <div class="col-md-4">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-4">
               <div className="card card-01">
                 <img
                   className="card-img-top"
@@ -30,14 +32,14 @@ const Home = () => {
                   </span>
                   <h4 className="card-title">About</h4>
                   <p className="card-text">Learn about our team.</p>
-                  <Link to="/about" className="btn btn-default text-uppercase">
+                  <Link to="/" className="btn btn-default text-uppercase">
                     Explore
                   </Link>
                 </div>
               </div>
             </div>
 
-            <div class="col-md-4">
+            <div className="col-md-4">
               <div className="card card-01">
                 <img
                   className="card-img-top"
@@ -50,17 +52,14 @@ const Home = () => {
                   </span>
                   <h4 className="card-title">Courses</h4>
                   <p className="card-text">Check out our course offerings.</p>
-                  <Link
-                    to="/courses"
-                    className="btn btn-default text-uppercase"
-                  >
+                  <Link to="/" className="btn btn-default text-uppercase">
                     Explore
                   </Link>
                 </div>
               </div>
             </div>
 
-            <div class="col-md-4">
+            <div className="col-md-4">
               <div className="card card-01">
                 <img
                   className="card-img-top"
@@ -71,9 +70,9 @@ const Home = () => {
                   <span className="badge-box">
                     <i className="fa fa-check"></i>
                   </span>
-                  <h4 className="card-title">Cart</h4>
-                  <p className="card-text">Found your fit? Check out here.</p>
-                  <Link to="/cart" className="btn btn-default text-uppercase">
+                  <h4 className="card-title">Sign Up</h4>
+                  <p className="card-text">Found your fit? Sign up here.</p>
+                  <Link to="/" className="btn btn-default text-uppercase">
                     Explore
                   </Link>
                 </div>
