@@ -1,6 +1,6 @@
 import React from "react";
 
-function CourseSingleView() {
+function CourseList() {
 	return (
 		<header className="flex-row px-1 p-3 justify-space-between bg-danger text-light">
 			<span>
@@ -11,4 +11,4 @@ function CourseSingleView() {
 	);
 }
 
-export default CourseSingleView;
+export default CourseList;

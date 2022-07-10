@@ -1,6 +1,6 @@
 import React from "react";
 
-function CourseOverview() {
+function CourseItem() {
 	return (
 		<header className="flex-row px-1 p-3 justify-space-between bg-danger text-light">
 			<span>
@@ -11,4 +11,4 @@ function CourseOverview() {
 	);
 }
 
-export default CourseOverview;
+export default CourseItem;

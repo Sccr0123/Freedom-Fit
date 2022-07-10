@@ -14,8 +14,8 @@ import Header from "./components/Header";
 import { StoreProvider } from "./utils/GlobalState";
 
 //Pages
-import CourseOverview from "./components/CourseOverview";
-import CourseSingleView from "./components/CourseSingleView";
+import CourseList from "./components/CourseList";
+import CourseItem from "./components/CourseItem";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Login from "./components/Login";
