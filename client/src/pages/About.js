@@ -1,5 +1,9 @@
 import React from "react";
 import AboutImage from "../assets/images/about.jpg";
+import FitnessInstructor from "../assets/images/fitnessinstructor.jpg";
+import Nutritionist from "../assets/images/nutritionist.jpg";
+import PT from "../assets/images/physicaltherapist.jpg";
+import CourseManager from "../assets/images/coursemanager.jpg";
 
 function About() {
   return (
@@ -16,7 +20,7 @@ function About() {
       <div className="about d-flex h-100 m-3 p-4">
         <img
           className="about-img img-fluid img-thumbnail rounded float-left"
-          src={AboutImage}
+          src={FitnessInstructor}
           alt="Two people in athletic gear"
         />
         <div className="p-3 text-left">
@@ -39,14 +43,14 @@ function About() {
         </div>
         <img
           className="about-img img-fluid img-thumbnail rounded float-left"
-          src={AboutImage}
+          src={Nutritionist}
           alt="Two people in athletic gear"
         />
       </div>
       <div className="about d-flex h-100 m-3 p-4">
         <img
           className="about-img img-fluid img-thumbnail rounded float-left"
-          src={AboutImage}
+          src={PT}
           alt="Two people in athletic gear"
         />
         <div className="p-3 text-left">
@@ -69,7 +73,7 @@ function About() {
         </div>
         <img
           className="about-img img-fluid img-thumbnail rounded float-left"
-          src={AboutImage}
+          src={CourseManager}
           alt="Two people in athletic gear"
         />
       </div>
