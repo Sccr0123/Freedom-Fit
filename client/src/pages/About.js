@@ -9,7 +9,7 @@ function About() {
   return (
     <div>
       <div className="about d-flex h-100 m-3 p-4 justify-content-center">
-        <div className="col-8 p-3 text-center">
+        <div className="p-3 text-center">
           <h1 className="mb-4">FreedomFit History</h1>
           <h3>
             FreedomFit came to life when a couple of friends decided to merge
@@ -41,29 +41,8 @@ function About() {
           </h3>
         </div>
       </div>
+
       <div className="about d-flex h-100 m-3 p-4">
-        <div className="p-3 text-left">
-          <h2 className="mb-4">Aiko Yamada - Nutritionist</h2>
-          <h3>
-            Aiko is a nutritionist with seven years of experience developing
-            customized meal plans. Aiko's love of food began at a young age
-            helping her father in the kitchen. Aiko's mission is to teach others
-            that you can enjoy flavorful food and still eat to optimize your
-            health.
-          </h3>
-        </div>
-        <img
-          className="about-img img-fluid img-thumbnail rounded float-left"
-          src={Nutritionist}
-          alt="Two people in athletic gear"
-        />
-      </div>
-      <div className="about d-flex h-100 m-3 p-4">
-        <img
-          className="about-img img-fluid img-thumbnail rounded float-left"
-          src={PT}
-          alt="Two people in athletic gear"
-        />
         <div className="p-3 text-left">
           <h2 className="mb-4">Camila Rodriguez - Physical Therapist</h2>
           <h3>
@@ -74,7 +53,31 @@ function About() {
             injury.
           </h3>
         </div>
+        <img
+          className="about-img img-fluid img-thumbnail rounded float-left"
+          src={PT}
+          alt="Two people in athletic gear"
+        />
       </div>
+
+      <div className="about d-flex h-100 m-3 p-4">
+        <img
+          className="about-img img-fluid img-thumbnail rounded float-left"
+          src={Nutritionist}
+          alt="Two people in athletic gear"
+        />
+        <div className="p-3 text-left">
+          <h2 className="mb-4">Aiko Yamada - Nutritionist</h2>
+          <h3>
+            Aiko is a nutritionist with seven years of experience developing
+            customized meal plans. Aiko's love of food began at a young age
+            helping her father in the kitchen. Aiko's mission is to teach others
+            that you can enjoy flavorful food and still eat to optimize your
+            health
+          </h3>
+        </div>
+      </div>
+
       <div className="about d-flex h-100 m-3 p-4">
         <div className="p-3 text-left">
           <h2 className="mb-4">Jayla Jordan - Course Manager</h2>
