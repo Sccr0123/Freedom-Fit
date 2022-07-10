@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
 import { Link } from 'react-router-dom';
 import { ADD_USER } from '../utils/mutations';
+import Auth from '../utils/auth';
 
 function Signup(props) {
 
@@ -35,31 +36,31 @@ function Signup(props) {
             <div class="row justify-content-center">
                 <div class="col-md-8">
                     <div class="card">
-                        <div class="card-header">Sign Up</div>
+                        <div class="card-header"><h2>Sign Up</h2></div>
                             <div class="card-body">
                                 <form onSubmit={handleFormSubmit} class="login-form">
                                     <div class="form-group row">
                                         <label for="firstName" class="col-md-4 col-form-label text-md-right">First Name:</label>
                                             <div class="col-md-6">
-                                                <input type="text" id="firstName" class="form-control"/>
+                                                <input type="text" id="firstName" class="form-control" onChange={handleChange}/>
                                             </div>
                                     </div>
                                     <div class="form-group row">
                                         <label for="lastName" class="col-md-4 col-form-label text-md-right">Last Name:</label>
                                             <div class="col-md-6">
-                                                <input type="text" id="lastName" class="form-control"/>
+                                                <input type="text" id="lastName" class="form-control" onChange={handleChange}/>
                                             </div>
                                     </div>
                                     <div class="form-group row">
                                         <label for="email" class="col-md-4 col-form-label text-md-right">Email:</label>
                                             <div class="col-md-6">
-                                                <input type="text" id="email" class="form-control"/>
+                                                <input type="text" id="email" class="form-control" onChange={handleChange}/>
                                             </div>
                                     </div>
                                     <div class="form-group row">
                                         <label for="password" class="col-md-4 col-form-label text-md-right">Password:</label>
                                             <div class="col-md-6">
-                                                <input type="password" id="password" class="form-control"/>
+                                                <input type="password" id="password" class="form-control" onChange={handleChange}/>
                                             </div>
                                     </div>
                                     <div class="col-md-6 offset-md-4">

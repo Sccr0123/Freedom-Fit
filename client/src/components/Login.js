@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
 import { Link } from 'react-router-dom';
 import { LOGIN } from '../utils/mutations';
+import Auth from '../utils/auth';
 
 function Login(props) {
 
@@ -34,19 +35,19 @@ function Login(props) {
             <div class="row justify-content-center">
                 <div class="col-md-8">
                     <div class="card">
-                        <div class="card-header">Account Login</div>
+                        <div class="card-header"><h2>Login</h2></div>
                             <div class="card-body">
                                 <form onSubmit={handleFormSubmit} class="login-form">
                                     <div class="form-group row">
                                         <label for="email" class="col-md-4 col-form-label text-md-right">Email:</label>
                                             <div class="col-md-6">
-                                                <input type="text" id="email" class="form-control"/>
+                                                <input type="text" id="email" class="form-control" onChange={handleChange}/>
                                             </div>
                                     </div>
                                     <div class="form-group row">
                                         <label for="password" class="col-md-4 col-form-label text-md-right">Password:</label>
                                             <div class="col-md-6">
-                                                <input type="password" id="password" class="form-control"/>
+                                                <input type="password" id="password" class="form-control" onChange={handleChange}/>
                                             </div>
                                     </div>
                                     {error ? (
