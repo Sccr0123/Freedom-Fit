@@ -47,8 +47,11 @@ function App() {
                 <Route path="/courses" element={<CourseList />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/signup" element={<Signup />} />
-                <Route path="/profile/:id" element={<Profile />} />
-                <Route path="/profile/:id/info" element={<Info />} />
+                <Route path="/profile">
+                  <Route path=":username" element={<Profile />} />
+                  <Route path="" element={<Profile />} />
+                </Route>
+                <Route path="/profile/username/info" element={<Info />} />
               </Routes>
             </div>
           </StoreProvider>
