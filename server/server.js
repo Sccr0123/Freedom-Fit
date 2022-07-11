@@ -1,4 +1,5 @@
 const express = require("express");
+const stripe = require("stripe")("sk_test_4eC39HqLyjWDarjtT1zdp7dc");
 const { ApolloServer } = require("apollo-server-express");
 const path = require("path");
 

@@ -20,7 +20,7 @@ const Header = () => {
 				<nav className="d-flex">
 					<div>
 						<Link to="/about">About</Link>
-					</div>
+					</div>.
 
 					<div>
 						<Link to="/courses">Courses</Link>
