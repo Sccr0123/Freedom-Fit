@@ -11,6 +11,10 @@ const typeDefs = gql`
 		name: String
 	}
 
+	type Checkout {
+		session: ID
+	}
+
 	type Course {
 		_id: ID
 		name: String
