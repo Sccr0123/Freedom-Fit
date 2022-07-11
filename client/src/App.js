@@ -14,8 +14,8 @@ import Header from "./components/Header";
 import { StoreProvider } from "./utils/GlobalState";
 
 //Pages
-import CourseList from "./components/CourseList";
 import CourseItem from "./components/CourseItem";
+import CourseList from "./pages/CourseList";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Login from "./components/Login";
@@ -41,6 +41,7 @@ function App() {
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
+                <Route path="/courses" element={<CourseList />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/signup" element={<Signup />} />
               </Routes>
