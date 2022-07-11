@@ -7,7 +7,6 @@ function ProfileNav() {
         <nav className="account-navigation">
             <Link to={`/profile/:id`}>Dashboard</Link>
             <Link to={`/profile/:id/info`}>My Info</Link>
-            <Link to={`/profile/id:/signout`}>Signout</Link>
         </nav>
   </aside>
   )

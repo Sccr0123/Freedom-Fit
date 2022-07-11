@@ -51,7 +51,6 @@ function App() {
                   <Route path=":username" element={<Profile />} />
                   <Route path="" element={<Profile />} />
                 </Route>
-                <Route path="/profile/username/info" element={<Info />} />
               </Routes>
             </div>
           </StoreProvider>
