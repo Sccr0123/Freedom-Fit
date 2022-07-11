@@ -1,12 +1,53 @@
 const { AuthenticationError } = require("apollo-server-express");
 const { Category, Course, Order, User } = require("../models");
 const { populate } = require("../models/User");
+const stripe = require("stripe")("sk_test_4eC39HqLyjWDarjtT1zdp7dc");
 
 const resolver = {
 	Query: {
 		categories: async () => {
 			const categories = Category.find().sort({ createdAt: -1 });
 			return categories;
+		},
+		checkout: async (parent, args, context) => {
+			console.log(context.headers.referer);
+			const url = new URL(context.headers.referer).origin;
+			const order = new Order({ courses: args.courses });
+			const { courses } = await order.populate("courses");
+
+			const line_items = [];
+
+			for (let i = 0; i < courses.length; i++) {
+				// generate product id
+				const course = await stripe.products.create({
+					name: courses[i].name,
+					description: courses[i].description,
+					// images: [`${url}/images/${products[i].image}`],
+				});
+
+				// generate price id using the product id
+				const price = await stripe.prices.create({
+					product: course.id,
+					unit_amount: courses[i].price * 100,
+					currency: "usd",
+				});
+
+				// add price id to the line items array
+				line_items.push({
+					price: price.id,
+					quantity: 1,
+				});
+			}
+
+			const session = await stripe.checkout.sessions.create({
+				payment_method_types: ["card"],
+				line_items,
+				mode: "payment",
+				success_url: `${url}/success?session_id={CHECKOUT_SESSION_ID}`,
+				cancel_url: `${url}/`,
+			});
+
+			return { session: session.id };
 		},
 		courses: async () => {
 			const courses = Course.find().sort({ createdAt: -1 });
@@ -18,7 +59,7 @@ const resolver = {
 			return userData;
 		},
 		order: async (parent, { _id }) => {
-			const order = Order.findOne({ _id }).populate("products");
+			const order = Order.findOne({ _id }).populate("courses");
 			return order;
 		},
 		orders: async () => {
