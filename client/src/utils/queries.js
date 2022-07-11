@@ -17,7 +17,7 @@ export const QUERY_USER = gql`
 			orders {
 				_id
 				purchaseDate
-				products {
+				courses {
 					_id
 					name
 					description
