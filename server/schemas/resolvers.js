@@ -18,20 +18,20 @@ const resolver = {
 			return userData;
 		},
 		order: async (parent, { _id }) => {
-			const order = Order.findOne({ _id }).populate("products");
+			const order = Order.findOne({ _id }).populate("courses");
 			return order;
 		},
 		orders: async () => {
 			const orders = Order.find()
 				.sort({ createdAt: -1 })
-				.populate("products");
+				.populate("courses");
 			return orders;
 		},
 		user: async (parent, { _id }) => {
 			const user = User.findOne({ _id }).populate({
 				path: "orders",
 				populate: {
-					path: "products",
+					path: "courses",
 				},
 			});
 			return user;
@@ -42,7 +42,7 @@ const resolver = {
 				.populate({
 					path: "orders",
 					populate: {
-						path: "products",
+						path: "courses",
 					},
 				});
 			return users;
@@ -55,8 +55,8 @@ const resolver = {
 
 			return { token, user };
 		},
-		addOrder: async (parent, { products }) => {
-			const order = await User.create({ products });
+		addOrder: async (parent, { courses }) => {
+			const order = await User.create({ courses });
 			return { order };
 		},
 		login: async (parent, { email, password }) => {
