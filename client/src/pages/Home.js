@@ -52,7 +52,7 @@ const Home = () => {
                   </span>
                   <h4 className="card-title">Courses</h4>
                   <p className="card-text">Check out our course offerings.</p>
-                  <Link to="/" className="btn btn-default text-uppercase">
+                  <Link to="/courses" className="btn btn-default text-uppercase">
                     Explore
                   </Link>
                 </div>
