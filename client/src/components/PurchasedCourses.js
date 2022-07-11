@@ -21,9 +21,9 @@ const PurchasedCourses = ({ orders }) => {
                   {new Date(parseInt(order.purchaseDate)).toLocaleDateString()}
                 </h3>
                 <div className="flex-row">
-                  {order.products.map(({ _id, image, name, price }, index) => (
+                  {order.courses.map(({ _id, image, name, price }, index) => (
                     <div key={index} className="card">
-                      <Link to={`/products/${_id}`}>
+                      <Link to={`/courses/${_id}`}>
                         <h4 className='card-title'>${name}</h4>
                         <img alt={name} src={`/images/${image}`} />
                       </Link>
