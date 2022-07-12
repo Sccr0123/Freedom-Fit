@@ -44,11 +44,11 @@ function App() {
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
-                {/* <Route path="/courses" element={<CourseList />} /> */}
+                <Route path="/courses" element={<CourseList />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/signup" element={<Signup />} />
                 <Route path="/profile" element={<Profile />} />
-                <Route path="/courses/:id" element={<CourseList />} />
+                {/* <Route path="/courses/:id" element={<CourseList />} /> */}
                 <Route path="" element={<NoMatch />} />
               </Routes>
             </div>
