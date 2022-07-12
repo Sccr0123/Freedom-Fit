@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useStoreContext } from "../utils/GlobalState";
-import { ADD_TO_CART, UPDATE_CART_QUANTITY } from "../utils/actions";
+import { ADD_TO_CART, UPDATE_CART_QUANTITY,  REMOVE_FROM_CART } from "../utils/actions";
 import { idbPromise } from "../utils/helpers";
 
 function CourseItem(item) {
@@ -37,6 +37,15 @@ function CourseItem(item) {
 		}
 	}
 
+	const removeFromCart = () => {
+		dispatch({
+			type: REMOVE_FROM_CART,
+			_id: item._id,
+		});
+
+		idbPromise('cart', 'delete', { ...item });
+	};
+
 	return (
 		<div className="card px-1 py-1">
 			<Link to={`/courses/${_id}`}>
@@ -49,7 +58,10 @@ function CourseItem(item) {
 			<div>
 				<span>${price}</span>
 			</div>
+			<div>
 			<button onClick={addToCart}>Add to cart</button>
+			<button onClick={removeFromCart}>Remove from cart</button>
+			</div>
 		</div>
 	);
 }
