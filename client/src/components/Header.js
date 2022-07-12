@@ -1,14 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { capitalizeFirstLetter, idbPromise } from "../utils/helpers";
 import Cart from "../components/Cart";
 import Auth from "../utils/auth";
-
-// const Navigation = () => {
-//   const logout = (event) => {
-//     event.preventDefault();
-//     Auth.logout();
-//   };
 
 const Header = () => {
 	return (
@@ -35,7 +28,9 @@ const Header = () => {
 							</div>
 
 							<div className="p-3">
-								<Link to="/logout">Logout</Link>
+								<a href="/" onClick={() => Auth.logout()}>
+									Logout
+								</a>
 							</div>
 						</>
 					) : (
