@@ -29,6 +29,14 @@ const Cart = () => {
 		}
 	}, [state.cart.length, dispatch]);
 
+	useEffect(() => {
+		if (data) {
+			stripePromise.then((res) => {
+				res.redirectToCheckout({ sessionId: data.checkout.session });
+			});
+		}
+	}, [data]);
+
 	function toggleCart() {
 		dispatch({ type: TOGGLE_CART });
 	}
@@ -42,16 +50,16 @@ const Cart = () => {
 	}
 
 	function submitCheckout() {
-		const productIds = [];
+		const courseIds = [];
 
 		state.cart.forEach((item) => {
 			for (let i = 0; i < item.purchaseQuantity; i++) {
-				productIds.push(item._id);
+				courseIds.push(item._id);
 			}
 		});
 
 		getCheckout({
-			variables: { products: productIds },
+			variables: { courses: courseIds },
 		});
 	}
 
