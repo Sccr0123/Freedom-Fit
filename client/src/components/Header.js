@@ -35,7 +35,9 @@ const Header = () => {
 							</div>
 
 							<div className="p-3">
-								<Link to="/logout">Logout</Link>
+								<a href="/" onClick={() => Auth.logout()}>
+									Logout
+								</a>
 							</div>
 						</>
 					) : (
