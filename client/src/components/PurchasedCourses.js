@@ -7,7 +7,7 @@ const PurchasedCourses = ({ orders }) => {
   if (!orders || !orders.length) {
     return (
       <div><p className="bg-dark text-light p-3">No courses purchased yet.</p>
-      <Link to={`/courselist`}>Find the course that's right for you!</Link>
+      <Link to={`/courses`}>Find the course that's right for you!</Link>
       </div>
     );
   }

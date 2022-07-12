@@ -3,17 +3,23 @@
 //Pitch here
 
 ## Technologies
-![Technologies](https://img.shields.io/badge/-HTML-E34F26?logo=html5&logoColor=white)
-![Technologies](https://img.shields.io/badge/-CSS-1572B6?logo=css3&logoColor=white)
-![Technologies](https://img.shields.io/badge/-Bootstrap-7952B3?logo=Bootstrap&logoColor=white)
-![Technologies](https://img.shields.io/badge/-ReactJs-61DAFB?logo=react)
-![Technologies](https://img.shields.io/badge/-JavaScript-007396?logo=JavaScript&logoColor=white)
-![Technologies](https://img.shields.io/badge/-Node.js-339933?logo=Node.js&logoColor=white)
-![Technologies](https://img.shields.io/badge/-Git-F05032?logo=Git&logoColor=white)
-![Technologies](https://img.shields.io/badge/-npm-CB3837?logo=npm&logoColor=white)
-![Technologies](https://img.shields.io/badge/Heroku-430098?logo=Git&logoColor=white)
+![HTML](https://img.shields.io/badge/-HTML-E34F26?logo=html5&logoColor=white)
+![CSS](https://img.shields.io/badge/-CSS-1572B6?logo=css3&logoColor=white)
+![Bootstrap](https://img.shields.io/badge/-Bootstrap-7952B3?logo=Bootstrap&logoColor=white)
+![ReactJS](https://img.shields.io/badge/-ReactJs-61DAFB?logo=react)
+![JavaScript](https://img.shields.io/badge/-JavaScript-007396?logo=JavaScript&logoColor=white)
+![Apollo GraphQL](https://img.shields.io/static/v1?style=for-the-badge&message=Apollo+GraphQL&color=311C87&logo=Apollo+GraphQL&logoColor=FFFFFF&label=)
+![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
+![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
+![Node.js](https://img.shields.io/badge/-Node.js-339933?logo=Node.js&logoColor=white)
+![JWT](https://img.shields.io/badge/JWT-black?style=for-the-badge&logo=JSON%20web%20tokens)
+![Git](https://img.shields.io/badge/-Git-F05032?logo=Git&logoColor=white)
+![NPM](https://img.shields.io/badge/-npm-CB3837?logo=npm&logoColor=white)
+![Heroku](https://img.shields.io/badge/Heroku-430098?logo=Git&logoColor=white)
 
 ## Description
+
+The purpose of this project is to collaboratively build a MERN stack single-page application by combining a scalable MongoDB back end, a GraphQL API, an Express.js and Node.js server with a React front end while also implementing user authentication with JWT for a user-focused platform.
 
 ## Project Requirements
 * Use React for the front end.
@@ -42,6 +48,22 @@
 
 
 ## Site Images
+
+### Home Page
+
+![Home Page](https://i.imgur.com/1by2E1f.png)
+
+### About
+
+![About Page](https://i.imgur.com/7oacqer.png)
+
+### Course List
+
+![Course List](https://i.imgur.com/yc4zBYN.png)
+
+### User Profile
+
+![User Profile]()
 
 ## Deployed Application
 
