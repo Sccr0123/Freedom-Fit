@@ -12,14 +12,17 @@ import {
 
 import Header from "./components/Header";
 import { StoreProvider } from "./utils/GlobalState";
+import NoMatch from "./components/NoMatch";
 
 //Pages
 import CourseItem from "./components/CourseItem";
 import CourseList from "./pages/CourseList";
 import Home from "./pages/Home";
 import About from "./pages/About";
+import Profile from "./pages/Profile";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
+import Info from "./components/Info";
 
 const httpLink = createHttpLink({
   uri: "/graphql",
@@ -41,9 +44,12 @@ function App() {
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
-                <Route path="/courses" element={<CourseList />} />
+                {/* <Route path="/courses" element={<CourseList />} /> */}
                 <Route path="/login" element={<Login />} />
                 <Route path="/signup" element={<Signup />} />
+                <Route path="/profile" element={<Profile />} />
+                <Route path="/courses/:id" element={<CourseList />} />
+                <Route path="" element={<NoMatch />} />
               </Routes>
             </div>
           </StoreProvider>

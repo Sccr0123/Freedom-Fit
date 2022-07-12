@@ -6,23 +6,23 @@ const courseSchema = new Schema({
 	name: {
 		type: String,
 		required: true,
-		trim: true,
+		trim: true
 	},
 	description: {
-		type: String,
+		type: String
 	},
 	image: {
-		type: String,
+		type: String
 	},
 	price: {
 		type: Schema.Types.Decimal128,
 		required: true,
-		min: 0.99,
+		min: 0.99
 	},
 	category: {
 		type: Schema.Types.ObjectId,
 		ref: "Category",
-		required: true,
+		required: true
 	},
 });
 
