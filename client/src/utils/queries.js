@@ -2,35 +2,32 @@ import { gql } from "@apollo/client";
 
 export const QUERY_COURSE = gql`
 	query getCourse($category: ID) {
-	course(category: $category) {
-	_id
-	name
-	description
-	price
-	image
-	category {
-		_id
-	}
-	}
-}
-`;
-
-export const QUERY_ALL_COURSES = gql`
-	query{
-		courses {
+		course(category: $category) {
 			_id
 			name
 			description
 			price
+			image
 			category {
-				name
+				_id
 			}
 		}
 	}
 `;
 
+export const QUERY_ALL_COURSES = gql`
+	query getCourses{
+		courses {
+			_id
+			name
+			description
+			price
+		}
+	}
+`;
+
 export const QUERY_CATEGORIES = gql`
-	{
+	query{
 		categories {
 			_id
 			name
@@ -39,7 +36,7 @@ export const QUERY_CATEGORIES = gql`
 `;
 
 export const QUERY_USER = gql`
-	{
+	query{
 		user {
 			firstName
 			lastName

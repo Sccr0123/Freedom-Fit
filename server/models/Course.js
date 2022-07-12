@@ -15,7 +15,7 @@ const courseSchema = new Schema({
 		type: String
 	},
 	price: {
-		type: Schema.Types.Decimal128,
+		type: Schema.Types.Number,
 		required: true,
 		min: 0.99
 	},
