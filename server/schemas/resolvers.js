@@ -11,7 +11,6 @@ const resolver = {
 			return categories;
 		},
 		checkout: async (parent, args, context) => {
-			console.log(context.headers.referer);
 			const url = new URL(context.headers.referer).origin;
 			const order = new Order({ courses: args.courses });
 			const { courses } = await order.populate("courses");
@@ -51,7 +50,8 @@ const resolver = {
 			return { session: session.id };
 		},
 		courses: async () => {
-			const courses = Course.find().sort({ createdAt: -1 });
+			const courses = Course.find()
+				.sort({ createdAt: -1 })
 			return courses;
 		},
 		me: async (parent, args) => {
