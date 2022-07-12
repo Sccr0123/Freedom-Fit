@@ -31,7 +31,7 @@ const Header = () => {
 					{Auth.loggedIn() ? (
 						<>
 							<div className="p-3">
-								<Link to="/orders">Orders</Link>
+								<Link to="/profile">Orders</Link>
 							</div>
 
 							<div className="p-3">
