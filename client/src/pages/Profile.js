@@ -1,17 +1,17 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import PurchasedCourses from '../components/PurchasedCourses';
-import ProfileNav from '../components/ProfileNav';
+
 import { useQuery } from '@apollo/client';
 import { QUERY_USER } from '../utils/queries';
 import Auth from '../utils/auth';
 import { Link } from 'react-router-dom';
 
-const Profile = () => {
-  const { username: userParam } = useParams();
+const Profile = (props) => {
+  const { email: userParam } = useParams();
 
   const { loading, data } = useQuery(QUERY_USER, {
-    variables: { username: userParam }
+    variables: { email: userParam }
   });
 
   const user = data?.user || {};
@@ -24,10 +24,9 @@ const Profile = () => {
     <div>
     {Auth.loggedIn() ? (
     <div className="my-account">
-    <ProfileNav/>
     <div className="my-account__body">
       <div className="account-dashboard">
-        <h1>Hi, {user.firstName}</h1>
+        <h2>Hi, {user.email}</h2>
         <PurchasedCourses/>
       </div> 
     </div>
