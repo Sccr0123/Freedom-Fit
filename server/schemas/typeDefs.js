@@ -18,7 +18,7 @@ const typeDefs = gql`
 	type Course {
 		_id: ID
 		name: String
-		decription: String
+		description: String
 		image: String
 		price: Float
 		category: [Category]
