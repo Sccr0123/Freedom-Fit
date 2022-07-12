@@ -50,14 +50,19 @@ const resolver = {
 			return { session: session.id };
 		},
 		courses: async () => {
-			const courses = Course.find()
-				.sort({ createdAt: -1 })
+			const courses = Course.find().sort({ createdAt: -1 });
 			return courses;
 		},
-		me: async (parent, args) => {
-			const userData = await User.findOne({}).select("-__v -password");
+		me: async (parent, args, context) => {
+			if (context.user) {
+				const userData = await User.findOne({ _id: context.user._id })
+					.select("-__v -password")
+					.populate("orders");
 
-			return userData;
+				return userData;
+			}
+
+			throw new AuthenticationError("Not logged in");
 		},
 		order: async (parent, { _id }) => {
 			const order = Order.findOne({ _id }).populate("courses");

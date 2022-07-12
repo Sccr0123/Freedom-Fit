@@ -35,6 +35,18 @@ export const QUERY_CATEGORIES = gql`
 	}
 `;
 
+export const QUERY_ME = gql`
+	query Me{
+		me{
+			firstName
+			lastName
+			email
+			orders{
+				_id
+			}
+		}
+	}`
+
 export const QUERY_USER = gql`
 	query{
 		user {
