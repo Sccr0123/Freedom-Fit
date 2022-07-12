@@ -18,16 +18,16 @@ const resolver = {
 			const line_items = [];
 
 			for (let i = 0; i < courses.length; i++) {
-				// generate product id
-				const course = await stripe.products.create({
+				// generate course id
+				const course = await stripe.courses.create({
 					name: courses[i].name,
 					description: courses[i].description,
-					// images: [`${url}/images/${products[i].image}`],
+					images: [`${url}/images/${courses[i].image}`]
 				});
 
-				// generate price id using the product id
+				// generate price id using the course id
 				const price = await stripe.prices.create({
-					product: course.id,
+					course: course.id,
 					unit_amount: courses[i].price * 100,
 					currency: "usd",
 				});
@@ -102,9 +102,9 @@ const resolver = {
 
 			return { token, user };
 		},
-		addOrder: async (parent, { products }, context) => {
+		addOrder: async (parent, { courses }, context) => {
 			if (context.user) {
-				const order = new Order({ products });
+				const order = new Order({ courses });
 
 				await User.findByIdAndUpdate(context.user._id, {
 					$push: { orders: order },
