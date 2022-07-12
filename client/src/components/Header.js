@@ -1,14 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { capitalizeFirstLetter } from "../utils/helpers";
 import Cart from "../components/Cart";
 import Auth from "../utils/auth";
-
-// const Navigation = () => {
-//   const logout = (event) => {
-//     event.preventDefault();
-//     Auth.logout();
-//   };
 
 const Header = () => {
 	return (
