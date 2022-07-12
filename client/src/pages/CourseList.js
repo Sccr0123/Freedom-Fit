@@ -92,3 +92,28 @@ function CourseList() {
 }
 
 export default CourseList;
+
+
+// import React from "react";
+// import CourseList from "../components/CourseList";
+
+// const Courses = () => {
+//   return (
+//             <div className="about d-flex h-100 m-3 p-4">
+//                 <div className="p-3 text-left">
+//                     <h3>
+//                     <CourseList />
+//                     </h3>
+//                     <p>
+//                         <button>Add to Cart</button>
+//                         <button>Remove from Cart</button>
+//                     </p>
+//                 </div>
+//             </div>
+//   );
+// };
+
+// export default Courses;
+
+
+
