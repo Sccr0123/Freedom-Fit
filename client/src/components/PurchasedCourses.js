@@ -2,9 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 
-const PurchasedCourses = ({ orders }) => {
+const PurchasedCourses = ({ props }) => {
 
-  if (!orders || !orders.length) {
+  if (!props.user.orders || !props.user.orders.length) {
     return (
       <div><p className="bg-dark text-light p-3">No courses purchased yet.</p>
       <Link to={`/courselist`}>Find the course that's right for you!</Link>
@@ -15,7 +15,7 @@ const PurchasedCourses = ({ orders }) => {
   return (
     <div>
       <h2>Your Courses:</h2>
-            {orders.map((order) => (
+            {props.user.orders.map((order) => (
               <div key={order._id}>
                 <h3>
                   {new Date(parseInt(order.purchaseDate)).toLocaleDateString()}

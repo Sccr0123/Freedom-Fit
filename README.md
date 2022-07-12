@@ -3,15 +3,16 @@
 //Pitch here
 
 ## Technologies
-![Technologies](https://img.shields.io/badge/-HTML-E34F26?logo=html5&logoColor=white)
-![Technologies](https://img.shields.io/badge/-CSS-1572B6?logo=css3&logoColor=white)
-![Technologies](https://img.shields.io/badge/-Bootstrap-7952B3?logo=Bootstrap&logoColor=white)
-![Technologies](https://img.shields.io/badge/-ReactJs-61DAFB?logo=react)
-![Technologies](https://img.shields.io/badge/-JavaScript-007396?logo=JavaScript&logoColor=white)
-![Technologies](https://img.shields.io/badge/-Node.js-339933?logo=Node.js&logoColor=white)
-![Technologies](https://img.shields.io/badge/-Git-F05032?logo=Git&logoColor=white)
-![Technologies](https://img.shields.io/badge/-npm-CB3837?logo=npm&logoColor=white)
-![Technologies](https://img.shields.io/badge/Heroku-430098?logo=Git&logoColor=white)
+![HTML](https://img.shields.io/badge/-HTML-E34F26?logo=html5&logoColor=white)
+![CSS](https://img.shields.io/badge/-CSS-1572B6?logo=css3&logoColor=white)
+![Bootstrap](https://img.shields.io/badge/-Bootstrap-7952B3?logo=Bootstrap&logoColor=white)
+![ReactJS](https://img.shields.io/badge/-ReactJs-61DAFB?logo=react)
+![JavaScript](https://img.shields.io/badge/-JavaScript-007396?logo=JavaScript&logoColor=white)
+![Apollo GraphQL](https://img.shields.io/static/v1?style=for-the-badge&message=Apollo+GraphQL&color=311C87&logo=Apollo+GraphQL&logoColor=FFFFFF&label=)
+![Node.js](https://img.shields.io/badge/-Node.js-339933?logo=Node.js&logoColor=white)
+![Git](https://img.shields.io/badge/-Git-F05032?logo=Git&logoColor=white)
+![NPM](https://img.shields.io/badge/-npm-CB3837?logo=npm&logoColor=white)
+![Heroku](https://img.shields.io/badge/Heroku-430098?logo=Git&logoColor=white)
 
 ## Description
 
@@ -42,6 +43,14 @@
 
 
 ## Site Images
+
+### Home Page
+
+### About
+
+### Course List
+
+### User Profile
 
 ## Deployed Application
 
