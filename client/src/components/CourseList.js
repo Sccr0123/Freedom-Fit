@@ -3,7 +3,7 @@ import CourseItem from '../components/CourseItem';
 import { useStoreContext } from '../utils/GlobalState';
 import { UPDATE_COURSES } from '../utils/actions';
 import { useQuery } from '@apollo/client';
-import { QUERY_COURSES } from '../utils/queries';
+import { QUERY_ALL_COURSES } from '../utils/queries';
 import { idbPromise } from '../utils/helpers';
 
 function CourseList() {
@@ -11,7 +11,7 @@ function CourseList() {
 
     const { currentCategory } = state;
 
-    const { loading, data } = useQuery(QUERY_COURSES);
+    const { loading, data } = useQuery(QUERY_ALL_COURSES);
 
     useEffect(() => {
         if (data) {

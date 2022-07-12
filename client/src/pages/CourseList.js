@@ -1,4 +1,5 @@
 import React from "react";
+import { useQuery } from "@apollo/client";
 import Conditioning from "../assets/images/conditioning.JPG";
 import Pilates from "../assets/images/pilates.JPG";
 import WaterFitness from "../assets/images/waterfitness.JPG";
@@ -6,6 +7,7 @@ import Meditation from "../assets/images/meditation.JPG";
 import NutritionHealth from "../assets/images/nutritionhealth.JPG";
 
 function CourseList() {
+
     return (
         <div>
             <div className="about d-flex h-100 m-3 p-4">
