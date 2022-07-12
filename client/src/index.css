@@ -85,6 +85,7 @@ label {
 .home h2,
 .about h2 {
   font-weight: bold;
+  color: white;
 }
 
 .about-img {
