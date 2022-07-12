@@ -1,7 +1,5 @@
 # Freedom Fit
 
-//Pitch here
-
 ## Technologies
 ![HTML](https://img.shields.io/badge/-HTML-E34F26?logo=html5&logoColor=white)
 ![CSS](https://img.shields.io/badge/-CSS-1572B6?logo=css3&logoColor=white)
@@ -19,9 +17,23 @@
 
 ## Description
 
-The purpose of this project is to collaboratively build a MERN stack single-page application by combining a scalable MongoDB back end, a GraphQL API, an Express.js and Node.js server with a React front end while also implementing user authentication with JWT for a user-focused platform.
+FreedomFit is an application that allows users to learn healthy-living related tips and sign up for fitness classes tailored for all fitness levels ran by certified personal trainers.
+
+## Motivation for Development
+
+FreedomFit came to life when a couple of friends decided to merge their expertise of fitness and nutrition to create educational courses that empower others to take charge of their health.
+
+## User Story
+```
+AS A health conscious individual
+I WANT to have a portal to sign up for fitness classes
+SO THAT I can learn best practices and become healthier
+```
 
 ## Project Requirements
+
+The purpose of this project is to collaboratively build a MERN stack single-page application by combining a scalable MongoDB back end, a GraphQL API, an Express.js and Node.js server with a React front end while also implementing user authentication with JWT for a user-focused platform.
+
 * Use React for the front end.
 
 * Use GraphQL with a Node.js and Express.js server.
@@ -61,9 +73,14 @@ The purpose of this project is to collaboratively build a MERN stack single-page
 
 ![Course List](https://i.imgur.com/yc4zBYN.png)
 
+### Login / Signup
+
+![Login](https://i.imgur.com/iEvLVSm.png)
+![Signup](https://i.imgur.com/30FYTDP.png)
+
 ### User Profile
 
-![User Profile]()
+![User Profile](https://i.imgur.com/oo3QNKm.png)
 
 ## Deployed Application
 

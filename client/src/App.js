@@ -23,7 +23,7 @@ import About from "./pages/About";
 import Profile from "./pages/Profile";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
-import Info from "./components/Info";
+
 
 const authLink = setContext((_, { headers }) => {
 	const token = localStorage.getItem("id_token");
