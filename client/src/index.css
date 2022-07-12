@@ -158,6 +158,30 @@ p {
 }
 /*CARD CSS END*/
 
+/*BUTTON CSS START*/
+button {
+  font-size: 1.2rem;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.25rem 1rem;
+  border-radius: .5rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin: 0 1px;
+  background-color: orange;
+}
+
+button:hover {
+  opacity: .8;
+}
+
+button[disabled] {
+  cursor: default;
+  opacity: .8;
+}
+/*BUTTON CSS END*/ 
+
 .login {
   margin-top: 100px;
 }
