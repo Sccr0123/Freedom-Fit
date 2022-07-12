@@ -18,7 +18,7 @@ db.once("open", async () => {
 		{
 			name: 'Conditioning and Flexibility',
 			description:
-				'This course provides knowledge, skill, and application of methods to maintain and improve the body&#39;s overall aerobic fitness and flexibility. Various cardiovascular activities, circuit training and static and dynamic stretching will be used. Programs such as high intensity training, TRX and other current exercise trends may be incorporated.',
+				'This course provides knowledge, skill, and application of methods to maintain and improve overall aerobic fitness and flexibility. Various cardiovascular activities, circuit training and static and dynamic stretching will be used. Programs such as high intensity training, TRX and other current exercise trends may be incorporated.',
 			image: 'conditioning.JPG',
 			price: 199,
 			category: categories[0]._id
