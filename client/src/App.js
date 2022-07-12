@@ -16,7 +16,7 @@ import { StoreProvider } from "./utils/GlobalState";
 import NoMatch from "./components/NoMatch";
 
 //Pages
-import CourseItem from "./components/CourseItem";
+import Success from "./pages/Success"
 import CourseList from "./pages/CourseList";
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -62,7 +62,7 @@ function App() {
 								<Route path="/login" element={<Login />} />
 								<Route path="/signup" element={<Signup />} />
 								<Route path="/profile" element={<Profile />} />
-								{/* <Route path="/courses/:id" element={<CourseList />} /> */}
+								<Route path="/success" element={<Success />} />
 								<Route path="*" element={<NoMatch />} />
 							</Routes>
 						</div>

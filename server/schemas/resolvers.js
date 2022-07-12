@@ -43,7 +43,7 @@ const resolver = {
 				payment_method_types: ["card"],
 				line_items,
 				mode: "payment",
-				success_url: `${url}/success?session_id={CHECKOUT_SESSION_ID}`,
+				success_url: `${url}/success`,
 				cancel_url: `${url}/`,
 			});
 
@@ -102,9 +102,18 @@ const resolver = {
 
 			return { token, user };
 		},
-		addOrder: async (parent, { courses }) => {
-			const order = await User.create({ courses });
-			return { order };
+		addOrder: async (parent, { products }, context) => {
+			if (context.user) {
+				const order = new Order({ products });
+
+				await User.findByIdAndUpdate(context.user._id, {
+					$push: { orders: order },
+				});
+
+				return order;
+			}
+
+			throw new AuthenticationError("Not logged in");
 		},
 		login: async (parent, { email, password }) => {
 			const user = await User.findOne({ email });

@@ -31,3 +31,17 @@ export const ADD_USER = gql`
 		}
 	}
 `;
+
+export const ADD_ORDER = gql`
+	mutation addOrder($courses: [ID]!) {
+		addOrder(courses: $courses) {
+			purchaseDate
+			courses {
+				_id
+				name
+				description
+				price
+			}
+		}
+	}
+`;
