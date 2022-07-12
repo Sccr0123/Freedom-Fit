@@ -20,10 +20,6 @@ const Profile = (props) => {
 		return <div>Loading...</div>;
 	}
 
-	if (user) {
-		console.log(user);
-	}
-
 	return (
 		<div>
 			{Auth.loggedIn() ? (
