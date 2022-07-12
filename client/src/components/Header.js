@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { capitalizeFirstLetter, idbPromise } from "../utils/helpers";
+import { capitalizeFirstLetter } from "../utils/helpers";
 import Cart from "../components/Cart";
 import Auth from "../utils/auth";
 
