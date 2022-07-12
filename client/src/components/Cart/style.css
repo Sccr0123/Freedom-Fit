@@ -1,5 +1,5 @@
 .cart {
-	z-index: 0;
+	z-index: 1;
 	position: fixed;
 	top: 0;
 	right: 0;

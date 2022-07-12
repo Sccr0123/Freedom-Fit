@@ -10,6 +10,7 @@ function CourseItem(item) {
 	const {
 		image,
 		name,
+		description,
 		_id,
 		price
 	} = item;
@@ -47,22 +48,29 @@ function CourseItem(item) {
 	};
 
 	return (
-		<div className="card px-1 py-1">
-			<Link to={`/courses/${_id}`}>
+		<div className="about d-flex h-100 m-3 p-4">
+			<div className="p-3 text-left">
+                    <h2 className="mb-4">{name}</h2>
+					<span><h3>${price}</h3></span>
+					<h3>{description}</h3>
+			{/* <Link to={`/courses/${_id}`}>
 				<img
 					alt={name}
 					src={`/images/${image}`}
-				/>
-				<p>{name}</p>
-			</Link>
-			<div>
-				<span>${price}</span>
-			</div>
-			<div>
+				/>			
+			</Link> */}
+			<p>
 			<button onClick={addToCart}>Add to cart</button>
 			<button onClick={removeFromCart}>Remove from cart</button>
-			</div>
+			</p>
+			<img
+                    className="about-img img-fluid img-thumbnail rounded float-left"
+					alt={name}
+					src={`/images/${image}`}
+                />
 		</div>
+		</div>
+		
 	);
 }
 

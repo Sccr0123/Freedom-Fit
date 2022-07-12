@@ -171,6 +171,7 @@ function CourseList(){
                             _id={course._id}
                             image={course.image}
                             name={course.name}
+                            description={course.description}
                             price={course.price}
                         />
                     ))}
