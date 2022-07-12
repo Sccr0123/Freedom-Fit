@@ -63,7 +63,7 @@ function App() {
 								<Route path="/signup" element={<Signup />} />
 								<Route path="/profile" element={<Profile />} />
 								{/* <Route path="/courses/:id" element={<CourseList />} /> */}
-								<Route path="" element={<NoMatch />} />
+								<Route path="*" element={<NoMatch />} />
 							</Routes>
 						</div>
 					</StoreProvider>
