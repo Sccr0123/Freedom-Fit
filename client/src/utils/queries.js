@@ -1,8 +1,8 @@
 import { gql } from "@apollo/client";
 
-export const QUERY_COURSES = gql`
-	query getCourses($category: ID) {
-	courses(category: $category) {
+export const QUERY_COURSE = gql`
+	query getCourse($category: ID) {
+	course(category: $category) {
 	_id
 	name
 	description
@@ -16,17 +16,17 @@ export const QUERY_COURSES = gql`
 `;
 
 export const QUERY_ALL_COURSES = gql`
-{
-	courses {
-	_id
-	name
-	description
-	price
-	category {
-		name
+	query{
+		courses {
+			_id
+			name
+			description
+			price
+			category {
+				name
+			}
+		}
 	}
-	}
-}
 `;
 
 export const QUERY_CATEGORIES = gql`
@@ -43,18 +43,7 @@ export const QUERY_USER = gql`
 		user {
 			firstName
 			lastName
-			orders {
-				_id
-				purchaseDate
-				courses {
-					_id
-					name
-					description
-					price
-					quantity
-					image
-				}
-			}
+			email
 		}
 	}
 `;

@@ -30,21 +30,28 @@ function Login(props) {
   };
 
   return (
-    <div className="container d-flex justify-content-center">
+    <div className="login container d-flex justify-content-center">
       <div className="row"></div>
-      <div className="col-md-4">
-        <div className="card card-01">
-          <Link to="/signup">← Go to Signup</Link>
+      <div className="col-md-5">
+        <div className="login card card-01">
+          <Link
+            type="submit"
+            to="/signup"
+            className="btn btn-default text-uppercase"
+          >
+            ← Go to Signup
+          </Link>
           <div className="card-body">
             <span className="badge-box">
               <i className="fa fa-check"></i>
             </span>
 
-            <h2 className="card-title">Login</h2>
+            <h2 className="card-title">Log in to your account</h2>
             <form onSubmit={handleFormSubmit}>
               <div className="flex-row space-between">
                 <label htmlFor="email">Email Address:</label>
                 <input
+                  className="input"
                   placeholder="Email Address"
                   name="email"
                   type="email"
@@ -55,6 +62,7 @@ function Login(props) {
               <div className="flex-row space-between">
                 <label htmlFor="pwd">Password:</label>
                 <input
+                  className="input"
                   placeholder="******"
                   name="password"
                   type="password"

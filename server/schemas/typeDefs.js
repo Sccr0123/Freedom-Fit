@@ -18,7 +18,7 @@ const typeDefs = gql`
 	type Course {
 		_id: ID
 		name: String
-		decription: String
+		description: String
 		image: String
 		price: Float
 		category: [Category]
@@ -54,7 +54,7 @@ const typeDefs = gql`
 			lastName: String
 			email: String
 			password: String
-		): User
+		): Auth
 		addOrder(email: String!, orderID: ID!): Order
 		login(email: String!, password: String!): Auth
 	}

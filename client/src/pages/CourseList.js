@@ -1,4 +1,5 @@
 import React from "react";
+import { useQuery } from "@apollo/client";
 import Conditioning from "../assets/images/conditioning.JPG";
 import Pilates from "../assets/images/pilates.JPG";
 import WaterFitness from "../assets/images/waterfitness.JPG";
@@ -6,6 +7,7 @@ import Meditation from "../assets/images/meditation.JPG";
 import NutritionHealth from "../assets/images/nutritionhealth.JPG";
 
 function CourseList() {
+
     return (
         <div>
             <div className="about d-flex h-100 m-3 p-4">
@@ -16,6 +18,10 @@ function CourseList() {
                     Various cardiovascular activities, circuit training and static and dynamic stretching will be used. 
                     Programs such as high intensity training, TRX and other current exercise trends may be incorporated.
                     </h3>
+                    <p>
+                        <button>Add to Cart</button>
+                        <button>Remove from Cart</button>
+                    </p>
                 </div>
                 <img
                     className="about-img img-fluid img-thumbnail rounded float-left"
@@ -32,6 +38,10 @@ function CourseList() {
                     This helps to improve general fitness and overall well-being. 
                     Similar to Yoga, Pilates concentrates on posture, balance and flexibility.
                     </h3>
+                    <p>
+                        <button>Add to Cart</button>
+                        <button>Remove from Cart</button>
+                    </p>
                 </div>
                 <img
                     className="about-img img-fluid img-thumbnail rounded float-left"
@@ -48,6 +58,10 @@ function CourseList() {
                     Our water fitness classes use a variety of exercises and equipment. 
                     Activities may include dance, calisthenics, walking, and kicking, and typically intensity and impact can be varied on an individual basis. 
                     </h3>
+                    <p>
+                        <button>Add to Cart</button>
+                        <button>Remove from Cart</button>
+                    </p>
                 </div>
                 <img
                     className="about-img img-fluid img-thumbnail rounded float-left"
@@ -64,6 +78,10 @@ function CourseList() {
                     This course is designed to take you on a journey of mind-body mastery starting with the basics of mindfulness and meditation, 
                     and then advancing to working with your subconscious mind to facilitate healing.
                     </h3>
+                    <p>
+                        <button>Add to Cart</button>
+                        <button>Remove from Cart</button>
+                    </p>
                 </div>
                 <img
                     className="about-img img-fluid img-thumbnail rounded float-left"
@@ -80,6 +98,10 @@ function CourseList() {
                     You will get a sound understanding of energy homeostasis and the regulation of bodyweight. 
                     Also, you will learn strategies to improve nutritional status, and combat overnutrition and undernutrition based on scientific knowledge. 
                     </h3>
+                    <p>
+                        <button>Add to Cart</button>
+                        <button>Remove from Cart</button>
+                    </p>
                 </div>
                 <img
                     className="about-img img-fluid img-thumbnail rounded float-left"
@@ -92,3 +114,28 @@ function CourseList() {
 }
 
 export default CourseList;
+
+
+// import React from "react";
+// import CourseList from "../components/CourseList";
+
+// const Courses = () => {
+//   return (
+//             <div className="about d-flex h-100 m-3 p-4">
+//                 <div className="p-3 text-left">
+//                     <h3>
+//                     <CourseList />
+//                     </h3>
+//                     <p>
+//                         <button>Add to Cart</button>
+//                         <button>Remove from Cart</button>
+//                     </p>
+//                 </div>
+//             </div>
+//   );
+// };
+
+// export default Courses;
+
+
+

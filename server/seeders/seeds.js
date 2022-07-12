@@ -71,45 +71,45 @@ db.once("open", async () => {
 
 	// console.log("Orders Seeded");
 
-	await User.deleteMany();
+	// await User.deleteMany();
 
-	await User.create({
-		firstName: 'Pamela',
-		lastName: 'Washington',
-		email: 'pamela@testmail.com',
-		password: 'password12345',
-		// orders: [
-		// 	{
-		// 		courses: [courses[0]._id, courses[0]._id, courses[1]._id]
-		// 	}
-		// ]
-	});
+	// await User.create({
+	// 	firstName: 'Pamela',
+	// 	lastName: 'Washington',
+	// 	email: 'pamela@testmail.com',
+	// 	password: 'password12345',
+	// 	// orders: [
+	// 	// 	{
+	// 	// 		courses: [courses[0]._id, courses[0]._id, courses[1]._id]
+	// 	// 	}
+	// 	// ]
+	// });
 
-	const users = await User.insertMany([
-		{
-			firstName: "Pamela",
-			lastName: "Washington",
-			email: "pamela@testmail.com",
-			password: "password12345",
-			// orders: [],
-		},
-		{
-			firstName: "Elijah",
-			lastName: "Holt",
-			email: "eholt@testmail.com",
-			password: "password12345",
-			// orders: [],
-		},
-		{
-			firstName: "Mister",
-			lastName: "Tester",
-			email: "test@tester.com",
-			password: "1234567890",
-			// orders: [{ _id: "62c772783659b31e7bef36c6" }],
-		},
-	]);
+	// const users = await User.insertMany([
+	// 	{
+	// 		firstName: "Pamela",
+	// 		lastName: "Washington",
+	// 		email: "pamela@testmail.com",
+	// 		password: "password12345",
+	// 		// orders: [],
+	// 	},
+	// 	{
+	// 		firstName: "Elijah",
+	// 		lastName: "Holt",
+	// 		email: "eholt@testmail.com",
+	// 		password: "password12345",
+	// 		// orders: [],
+	// 	},
+	// 	{
+	// 		firstName: "Mister",
+	// 		lastName: "Tester",
+	// 		email: "test@tester.com",
+	// 		password: "1234567890",
+	// 		// orders: [{ _id: "62c772783659b31e7bef36c6" }],
+	// 	},
+	// ]);
 
-	console.log("Users Seeded");
+	// console.log("Users Seeded");
 
 	process.exit();
 });
