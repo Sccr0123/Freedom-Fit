@@ -39,6 +39,7 @@ const typeDefs = gql`
 
 	type Query {
 		categories: [Category]
+		checkout(courses: [ID]!): Checkout
 		courses: [Course]
 		me: User
 		order(_id: ID!): Order
