@@ -27,17 +27,17 @@ const PurchasedCourses = ({ orders }) => {
 					</h3>
 					<div className="flex-row">
 						{order.courses.map(
-							({ _id, image, name, price }, index) => (
-								<div key={index} className="card">
-									<Link to={`/courses/${_id}`}>
-										<h4 className="card-title">${name}</h4>
+							(course) => (
+								<div className="card">
+									<Link to={`/courses/${course._id}`}>
+										<h4 className="card-title">{course.name}</h4>
 										<img
-											alt={name}
-											src={`/images/${image}`}
+											alt={course.name}
+											src={`/images/${course.image}`}
 										/>
 									</Link>
 									<div>
-										<span>${price}</span>
+										<span>${course.price}</span>
 									</div>
 								</div>
 							)

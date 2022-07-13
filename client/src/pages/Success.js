@@ -10,18 +10,16 @@ function Success() {
 	useEffect(() => {
 		async function saveOrder() {
 			const cart = await idbPromise("cart", "get");
-			const courses = cart.map((item) => item._id);
+			let courses = cart.map((item) => item._id);
 
 			if (courses.length) {
 				const { data } = await addOrder({ variables: { courses } });
-				console.log(data);
 				const courseData = data.addOrder.courses;
 
 				courseData.forEach((item) => {
 					idbPromise("cart", "delete", item);
 				});
 			}
-
 			setTimeout(() => {
 				window.location.assign("/");
 			}, 3000);

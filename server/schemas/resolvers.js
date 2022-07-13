@@ -22,7 +22,7 @@ const resolver = {
 				const course = await stripe.products.create({
 					name: courses[i].name,
 					description: courses[i].description,
-					images: [`${url}/images/${courses[i].image}`]
+					images: [`${url}/images/${courses[i].image}`],
 				});
 
 				// generate price id using the course id
@@ -57,7 +57,16 @@ const resolver = {
 			if (context.user) {
 				const userData = await User.findOne({ _id: context.user._id })
 					.select("-__v -password")
-					.populate("orders");
+					.populate({
+						path: "orders",
+						model: "Order",
+						populate: {
+							path: "courses",
+							model: "Course",
+						},
+					});
+
+				console.log(userData.populated("courses"));
 
 				return userData;
 			}
@@ -77,8 +86,10 @@ const resolver = {
 		user: async (parent, { _id }) => {
 			const user = User.findOne({ _id }).populate({
 				path: "orders",
+				model: "Order",
 				populate: {
 					path: "courses",
+					model: "Course",
 				},
 			});
 			return user;
@@ -105,6 +116,8 @@ const resolver = {
 		addOrder: async (parent, { courses }, context) => {
 			if (context.user) {
 				const order = new Order({ courses });
+
+				await Order.create(order);
 
 				await User.findByIdAndUpdate(context.user._id, {
 					$push: { orders: order },
