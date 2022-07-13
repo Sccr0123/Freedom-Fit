@@ -66,8 +66,6 @@ const resolver = {
 						},
 					});
 
-				console.log(userData.populated("courses"));
-
 				return userData;
 			}
 
@@ -99,8 +97,10 @@ const resolver = {
 				.sort({ createdAt: -1 })
 				.populate({
 					path: "orders",
+					model: "Order",
 					populate: {
 						path: "courses",
+						model: "Course",
 					},
 				});
 			return users;
