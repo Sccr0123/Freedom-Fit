@@ -1,4 +1,5 @@
 # Freedom Fit
+
 FreedomFit came to life when a couple of friends decided to merge their expertise of fitness and nutrition to create educational courses 
 that empower others to take charge of their health. When you're in charge or your health, you have freedom to live life to the fullest. 
 Each FreedomFit course is designed by a certified fitness instructor, nutritionist and licensed physical therapist to provide you with 
@@ -21,6 +22,13 @@ a solid plan on how to improve your health. The team at FreedomFit is here to su
 
 ## Description
 The purpose of this project is to collaboratively build a MERN stack single-page application by combining a scalable MongoDB back end, a GraphQL API, an Express.js and Node.js server with a React front end while also implementing user authentication with JWT for a user-focused platform.
+
+## User Story
+```
+AS A health conscious individual
+I WANT to have a portal to sign up for fitness classes
+SO THAT I can learn best practices and become healthier
+```
 
 ## Project Requirements
 * Use React for the front end.
@@ -47,7 +55,6 @@ The purpose of this project is to collaboratively build a MERN stack single-page
 
 * Have a high-quality README (with unique name, description, technologies used, screenshot, and link to deployed application).
 
-
 ## Site Images
 
 ### Home Page
@@ -61,6 +68,13 @@ The purpose of this project is to collaboratively build a MERN stack single-page
 ### Course List
 
 ![Course List](https://i.imgur.com/yc4zBYN.png)
+
+### Login / Signup
+
+![Login](https://i.imgur.com/iEvLVSm.png)
+
+![Signup](https://i.imgur.com/30FYTDP.png)
+
 
 ### User Profile
 
