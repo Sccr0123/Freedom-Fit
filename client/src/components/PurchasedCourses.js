@@ -30,17 +30,19 @@ const PurchasedCourses = ({ orders }) => {
 							).toLocaleDateString()}
 						</h3>
 					</div>
-					<div className="flex-row">
+					<div className="card flex-row">
 						{order.courses.map((course) => (
-							<div className="card">
+							<div className="about d-flex h-100 m-3 p-4">
 								<Link to={`/courses/${course._id}`}>
-									<h4 className="card-title">
+									<h4 className="p-card-title">
 										{course.name}
 									</h4>
-									<img
+									<div className="about d-flex m-3 p-4">
+									<img className="img p-card-title"
 										alt={course.name}
 										src={`/assets/images/${course.image}`}
 									/>
+									</div>
 								</Link>
 								<div>
 									<span>${course.price}</span>

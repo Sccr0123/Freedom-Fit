@@ -244,3 +244,14 @@ label {
   font-size: x-large;
   border-radius: 4px;
 }
+
+/*PURCHASED COURSE CSS START*/
+h4.p-card-title {
+  color: white;
+}
+
+img.p-card-title {
+max-width:325px;
+height:245px;
+}
+/* PURCHASED COURSE CSS END */
