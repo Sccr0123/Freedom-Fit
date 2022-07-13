@@ -14,6 +14,7 @@ function Success() {
 
 			if (courses.length) {
 				const { data } = await addOrder({ variables: { courses } });
+				console.log(data);
 				const courseData = data.addOrder.courses;
 
 				courseData.forEach((item) => {

@@ -19,7 +19,7 @@ const resolver = {
 
 			for (let i = 0; i < courses.length; i++) {
 				// generate course id
-				const course = await stripe.courses.create({
+				const course = await stripe.products.create({
 					name: courses[i].name,
 					description: courses[i].description,
 					images: [`${url}/images/${courses[i].image}`]
@@ -27,7 +27,7 @@ const resolver = {
 
 				// generate price id using the course id
 				const price = await stripe.prices.create({
-					course: course.id,
+					product: course.id,
 					unit_amount: courses[i].price * 100,
 					currency: "usd",
 				});
