@@ -49,6 +49,7 @@ export const QUERY_ME = gql`
 					_id
 					name
 					image
+					description
 					price
 				}
 			}
