@@ -67,7 +67,7 @@ The purpose of this project is to collaboratively build a MERN stack single-page
 
 ## Deployed Application
 
-A link to the deployed application can be found [here]().
+[A link to the deployed application can be found here!](https://peaceful-refuge-94626.herokuapp.com/courses).
 
 ## Developers
 - :computer: [Zachary Thomas](https://github.com/Sccr0123)
