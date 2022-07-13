@@ -2,18 +2,19 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const PurchasedCourses = ({ orders }) => {
-	if (!orders || !orders.length) {
-		return (
-			<div>
-				<p className="bg-dark text-light p-3">
-					No courses purchased yet.
-				</p>
-				<Link to={`/courses`}>
-					Find the course that's right for you!
-				</Link>
-			</div>
-		);
-	}
+  if (!orders || !orders.length) {
+    return (
+      <div>
+        <p className="profile p-3">
+          No courses purchased yet.
+          <br></br>
+          <Link className="profile" to={`/courses`}>
+            Find the course that's right for you!
+          </Link>
+        </p>
+      </div>
+    );
+  }
 
 	return (
 		<div>

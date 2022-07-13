@@ -34,6 +34,15 @@ h2 {
   color: var(--patriotic-black);
 }
 
+h5 {
+  font-family: "Rock Salt", cursive;
+  text-align: center;
+  color: var(--patriotic-black);
+  font-weight: 600;
+  margin: 45px;
+  font-size: xx-large;
+}
+
 header {
   background-image: linear-gradient(
     180deg,
@@ -168,7 +177,7 @@ button {
   text-decoration: none;
   font-weight: bold;
   padding: 0.25rem 1rem;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   border: none;
   outline: none;
   cursor: pointer;
@@ -177,14 +186,14 @@ button {
 }
 
 button:hover {
-  opacity: .8;
+  opacity: 0.8;
 }
 
 button[disabled] {
   cursor: default;
-  opacity: .8;
+  opacity: 0.8;
 }
-/*BUTTON CSS END*/ 
+/*BUTTON CSS END*/
 
 .login {
   margin-top: 100px;
@@ -226,4 +235,12 @@ a[type="submit"]:hover {
 label {
   color: var(--patriotic-black);
   font-size: 24px;
+}
+
+.profile {
+  background-color: var(--patriotic-black);
+  color: var(--patriotic-white);
+  text-align: center;
+  font-size: x-large;
+  border-radius: 4px;
 }
