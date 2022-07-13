@@ -36,7 +36,10 @@ const Profile = (props) => {
       ) : (
         <div>
           <p className="profile p-3">You must be signed to view this page.</p>
-          <Link to={`/login`}>Login here</Link>
+          <br></br>
+          <Link className="profile" to={`/login`}>
+            Login here
+          </Link>
         </div>
       )}
     </div>
