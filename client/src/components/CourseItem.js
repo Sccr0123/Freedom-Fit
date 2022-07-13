@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { useStoreContext } from "../utils/GlobalState";
 import {
 	ADD_TO_CART,

@@ -1,5 +1,4 @@
 import React from "react";
-import AboutImage from "../assets/images/about.jpg";
 import FitnessInstructor from "../assets/images/fitnessinstructor.jpg";
 import Nutritionist from "../assets/images/nutritionist.jpg";
 import PT from "../assets/images/physicaltherapist.jpg";
