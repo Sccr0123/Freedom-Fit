@@ -27,22 +27,22 @@ const PurchasedCourses = ({ orders }) => {
 						).toLocaleDateString()}
 					</h3>
 					<div className="flex-row">
-						{order.courses.map(
-							(course) => (
-								<div className="card">
-									<Link to={`/courses/${course._id}`}>
-										<h4 className="card-title">{course.name}</h4>
-										<img
-											alt={course.name}
-											src={`/images/${course.image}`}
-										/>
-									</Link>
-									<div>
-										<span>${course.price}</span>
-									</div>
+						{order.courses.map((course) => (
+							<div className="card">
+								<Link to={`/courses/${course._id}`}>
+									<h4 className="card-title">
+										{course.name}
+									</h4>
+									<img
+										alt={course.name}
+										src={`/assets/images/${course.image}`}
+									/>
+								</Link>
+								<div>
+									<span>${course.price}</span>
 								</div>
-							)
-						)}
+							</div>
+						))}
 					</div>
 				</div>
 			))}

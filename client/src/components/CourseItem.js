@@ -1,42 +1,40 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useStoreContext } from "../utils/GlobalState";
-import { ADD_TO_CART, UPDATE_CART_QUANTITY,  REMOVE_FROM_CART } from "../utils/actions";
+import {
+	ADD_TO_CART,
+	UPDATE_CART_QUANTITY,
+	REMOVE_FROM_CART,
+} from "../utils/actions";
 import { idbPromise } from "../utils/helpers";
 
 function CourseItem(item) {
 	const [state, dispatch] = useStoreContext();
 
-	const {
-		image,
-		name,
-		description,
-		_id,
-		price
-	} = item;
+	const { image, name, description, _id, price } = item;
 
-	const { cart } = state
+	const { cart } = state;
 
 	const addToCart = () => {
-		const itemInCart = cart.find((cartItem) => cartItem._id === _id)
+		const itemInCart = cart.find((cartItem) => cartItem._id === _id);
 		if (itemInCart) {
 			dispatch({
 				type: UPDATE_CART_QUANTITY,
 				_id: _id,
-				purchaseQuantity: parseInt(itemInCart.purchaseQuantity) + 1
+				purchaseQuantity: parseInt(itemInCart.purchaseQuantity) + 1,
 			});
-			idbPromise('cart', 'put', {
+			idbPromise("cart", "put", {
 				...itemInCart,
-				purchaseQuantity: parseInt(itemInCart.purchaseQuantity) + 1
+				purchaseQuantity: parseInt(itemInCart.purchaseQuantity) + 1,
 			});
 		} else {
 			dispatch({
 				type: ADD_TO_CART,
-				course: { ...item, purchaseQuantity: 1 }
+				course: { ...item, purchaseQuantity: 1 },
 			});
-			idbPromise('cart', 'put', { ...item, purchaseQuantity: 1 });
+			idbPromise("cart", "put", { ...item, purchaseQuantity: 1 });
 		}
-	}
+	};
 
 	const removeFromCart = () => {
 		dispatch({
@@ -44,33 +42,28 @@ function CourseItem(item) {
 			_id: item._id,
 		});
 
-		idbPromise('cart', 'delete', { ...item });
+		idbPromise("cart", "delete", { ...item });
 	};
 
 	return (
 		<div className="about d-flex h-100 m-3 p-4">
 			<div className="p-3 text-left">
-                    <h2 className="mb-4">{name}</h2>
-					<span><h3>${price}</h3></span>
-					<h3>{description}</h3>
-			{/* <Link to={`/courses/${_id}`}>
+				<h2 className="mb-4">{name}</h2>
+				<span>
+					<h3>${price}</h3>
+				</span>
+				<h3>{description}</h3>
+				<p>
+					<button onClick={addToCart}>Add to cart</button>
+					<button onClick={removeFromCart}>Remove from cart</button>
+				</p>
 				<img
+					className="about-img img-fluid img-thumbnail rounded float-left"
 					alt={name}
-					src={`/images/${image}`}
-				/>			
-			</Link> */}
-			<p>
-			<button onClick={addToCart}>Add to cart</button>
-			<button onClick={removeFromCart}>Remove from cart</button>
-			</p>
-			<img
-                    className="about-img img-fluid img-thumbnail rounded float-left"
-					alt={name}
-					src={`/images/${image}`}
-                />
+					src={`/assets/images/${image}`}
+				/>
+			</div>
 		</div>
-		</div>
-		
 	);
 }
 

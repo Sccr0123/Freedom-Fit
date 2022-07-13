@@ -22,6 +22,7 @@ export const QUERY_ALL_COURSES = gql`
 			name
 			description
 			price
+			image
 		}
 	}
 `;
