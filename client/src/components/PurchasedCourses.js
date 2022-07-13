@@ -21,11 +21,15 @@ const PurchasedCourses = ({ orders }) => {
 			<h2>Your Courses:</h2>
 			{orders.map((order) => (
 				<div key={order._id}>
-					<h3>
-						{new Date(
-							parseInt(order.purchaseDate)
-						).toLocaleDateString()}
-					</h3>
+					<div className="d-flex justify-content-between text-dark">
+						<h3>Order Number: {order._id}</h3>
+						<h3>
+							Date of Purchase:
+							{new Date(
+								parseInt(order.purchaseDate)
+							).toLocaleDateString()}
+						</h3>
+					</div>
 					<div className="flex-row">
 						{order.courses.map((course) => (
 							<div className="card">
