@@ -242,4 +242,5 @@ label {
   color: var(--patriotic-white);
   text-align: center;
   font-size: x-large;
+  border-radius: 4px;
 }
