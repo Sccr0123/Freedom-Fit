@@ -48,19 +48,22 @@ function CourseItem(item) {
 		<div className="about d-flex h-100 m-3 p-4">
 			<div className="p-3 text-left">
 				<h2 className="mb-4">{name}</h2>
-				<span>
+				<span className="d-flex justify-content-center">
 					<h3>${price}</h3>
 				</span>
-				<h3>{description}</h3>
-				<p>
+				<div className="d-flex">
+					<h3>{description}</h3>
+					<p></p>
+					<img
+						className="about-img img-fluid img-thumbnail rounded float-left"
+						alt={name}
+						src={`/assets/images/${image}`}
+					/>
+				</div>
+				<div className="d-flex justify-content-center">
 					<button onClick={addToCart}>Add to cart</button>
 					<button onClick={removeFromCart}>Remove from cart</button>
-				</p>
-				<img
-					className="about-img img-fluid img-thumbnail rounded float-left"
-					alt={name}
-					src={`/assets/images/${image}`}
-				/>
+				</div>
 			</div>
 		</div>
 	);
