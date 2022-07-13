@@ -1,6 +1,8 @@
 # Freedom Fit
-
-//Pitch here
+FreedomFit came to life when a couple of friends decided to merge their expertise of fitness and nutrition to create educational courses 
+that empower others to take charge of their health. When you're in charge or your health, you have freedom to live life to the fullest. 
+Each FreedomFit course is designed by a certified fitness instructor, nutritionist and licensed physical therapist to provide you with 
+a solid plan on how to improve your health. The team at FreedomFit is here to support you so that you can live your life free!
 
 ## Technologies
 ![HTML](https://img.shields.io/badge/-HTML-E34F26?logo=html5&logoColor=white)
@@ -18,7 +20,6 @@
 ![Heroku](https://img.shields.io/badge/Heroku-430098?logo=Git&logoColor=white)
 
 ## Description
-
 The purpose of this project is to collaboratively build a MERN stack single-page application by combining a scalable MongoDB back end, a GraphQL API, an Express.js and Node.js server with a React front end while also implementing user authentication with JWT for a user-focused platform.
 
 ## Project Requirements
