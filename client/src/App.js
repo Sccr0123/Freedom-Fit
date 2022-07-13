@@ -16,7 +16,7 @@ import { StoreProvider } from "./utils/GlobalState";
 import NoMatch from "./components/NoMatch";
 
 //Pages
-import Success from "./pages/Success"
+import Success from "./pages/Success";
 import CourseList from "./pages/CourseList";
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -24,6 +24,10 @@ import Profile from "./pages/Profile";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
 import Info from "./components/Info";
+
+const httpLink = createHttpLink({
+	uri: "/graphql",
+});
 
 const authLink = setContext((_, { headers }) => {
 	const token = localStorage.getItem("id_token");
@@ -33,10 +37,6 @@ const authLink = setContext((_, { headers }) => {
 			authorization: token ? `Bearer ${token}` : "",
 		},
 	};
-});
-
-const httpLink = createHttpLink({
-	uri: "/graphql",
 });
 
 const client = new ApolloClient({
