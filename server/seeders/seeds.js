@@ -54,6 +54,14 @@ db.once("open", async () => {
 			image: 'nutritionhealth.JPG',
 			price: 99,
 			category: categories[2]._id
+		},
+		{
+			name: 'Physical Therapy Session',
+			description:
+				'We will evaluate your condition and develop a care plan that guides your therapy. It will include your personal goals like functioning and feeling better, plus exercises or other treatments to help you reach them. We will perform hands-on treatments for your symptoms. We will also teach you special exercises to help you move and function better.',
+			image: 'ptsession.JPG',
+			price: 99,
+			category: categories[0]._id
 		}
 	]);
 
