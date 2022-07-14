@@ -251,7 +251,30 @@ h4.p-card-title {
 }
 
 img.p-card-title {
-max-width:325px;
-height:245px;
+  max-width: 100%;
+  height: 245px;
 }
+
+.purchase-card {
+  width: 32%;
+}
+
 /* PURCHASED COURSE CSS END */
+
+@media screen and (max-width: 1399px) {
+  .purchase-card {
+    width: 48%;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .purchase-card {
+    width: 47%;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .purchase-card {
+    width: 100%;
+  }
+}
