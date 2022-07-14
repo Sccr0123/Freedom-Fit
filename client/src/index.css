@@ -1,13 +1,281 @@
+/* Font Imports */
+@import url("https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700");
+
+:root {
+  --patriotic-blue: #0052a5;
+  --patriotic-white: #f4f7f5;
+  --patriotic-red: #e0162b;
+  --patriotic-black: #212121;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "Saira Condensed", sans-serif, color;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: var(--patriotic-white);
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+h1 {
+  font-family: "Rock Salt", cursive;
+  color: var(--patriotic-white);
+  font-weight: 600;
+}
+
+h2 {
+  text-align: center;
+  color: var(--patriotic-black);
+}
+
+h5 {
+  font-family: "Rock Salt", cursive;
+  text-align: center;
+  color: var(--patriotic-black);
+  font-weight: 600;
+  margin: 45px;
+  font-size: xx-large;
+}
+
+header {
+  background-image: linear-gradient(
+    180deg,
+    rgba(224, 22, 43, 1),
+    rgba(224, 22, 43, 0.85)
+  ) !important;
+}
+
+nav {
+  font-size: 20px;
+  color: var(--patriotic-white);
+}
+
+nav a {
+  font-size: xx-large;
+  transition: all 0.2s;
+  color: var(--patriotic-white);
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: var(--patriotic-blue);
+  text-decoration: underline;
+}
+
+label {
+  color: var(--patriotic-black);
+  font-size: xx-large;
+}
+
+.header-cont a {
+  text-decoration: none;
+}
+
+.header-cont a:hover {
+  color: var(--patriotic-blue);
+  text-decoration: underline;
+}
+
+.home,
+.about {
+  border-radius: 10px;
+  background-image: linear-gradient(
+    180deg,
+    rgba(0, 82, 165, 1),
+    rgba(0, 82, 165, 0.4)
+  ) !important;
+  background-color: currentColor;
+}
+
+.home h2,
+.about h2 {
+  font-weight: bold;
+  color: white;
+}
+
+.about-img {
+  height: 200px;
+}
+
+/*CARD CSS START*/
+section {
+  margin: 30px;
+}
+.btn-default {
+  background: var(--patriotic-blue);
+  width: 100%;
+  color: var(--patriotic-white) !important;
+  font-weight: 700;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
+  font-size: 14px;
+}
+.card {
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.3);
+  border: none;
+  margin-bottom: 30px;
+}
+.card h4,
+p,
+label {
+  color: var(--patriotic-black);
+}
+
+.card-title {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.card-text,
+label {
+  font-size: 21px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  transition: all 1s ease;
+  z-index: 999;
+}
+.card-01 .card-body {
+  position: relative;
+  padding-top: 40px;
+  background-image: linear-gradient(
+    180deg,
+    rgba(187, 187, 187, 0.2),
+    rgba(187, 187, 187, 0.9)
+  ) !important;
+}
+.card-01 .badge-box {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  margin-left: -50px;
+  text-align: center;
+}
+.card-01 .badge-box i {
+  background: var(--patriotic-blue);
+  color: var(--patriotic-white);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-size: 20px;
+}
+/*CARD CSS END*/
+
+/*BUTTON CSS START*/
+button {
+  font-size: 1.2rem;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.25rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin: 0 1px;
+  background-color: orange;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+button[disabled] {
+  cursor: default;
+  opacity: 0.8;
+}
+/*BUTTON CSS END*/
+
+.login {
+  margin-top: 100px;
+}
+
+.login:hover {
+  transform: none;
+  transition: none;
+  z-index: none;
+}
+
+.input {
+  width: 100% !important;
+  padding: 12px 20px !important;
+  margin: 8px 0 !important;
+  display: inline-block !important;
+  border: 1px solid #ccc !important;
+  border-radius: 4px !important;
+  box-sizing: border-box !important;
+}
+
+button[type="submit"] {
+  width: 100%;
+  background-color: var(--patriotic-blue);
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: x-large;
+}
+
+button[type="submit"]:hover,
+a[type="submit"]:hover {
+  background-color: var(--patriotic-red);
+}
+
+label {
+  color: var(--patriotic-black);
+  font-size: 24px;
+}
+
+.profile {
+  background-color: var(--patriotic-black);
+  color: var(--patriotic-white);
+  text-align: center;
+  font-size: x-large;
+  border-radius: 4px;
+}
+
+/*PURCHASED COURSE CSS START*/
+h4.p-card-title {
+  color: white;
+}
+
+img.p-card-title {
+  max-width: 100%;
+  height: 245px;
+  border-radius: 5px;
+}
+
+.purchase-card {
+  width: 32%;
+}
+
+/* PURCHASED COURSE CSS END */
+
+@media screen and (max-width: 1399px) {
+  .purchase-card {
+    width: 48%;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .purchase-card {
+    width: 47%;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .purchase-card {
+    width: 100%;
+  }
 }
