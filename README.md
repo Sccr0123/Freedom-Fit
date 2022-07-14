@@ -59,15 +59,15 @@ SO THAT I can learn best practices and become healthier
 
 ### Home Page
 
-![Home Page](https://i.imgur.com/1by2E1f.png)
+![Home Page](https://i.imgur.com/cbf5U7m.png)
 
 ### About
 
-![About Page](https://i.imgur.com/7oacqer.png)
+![About Page](https://i.imgur.com/TYwIo23.png)
 
 ### Course List
 
-![Course List](https://i.imgur.com/yc4zBYN.png)
+![Course List](https://i.imgur.com/kNMWsAP.png)
 
 ### Login / Signup
 
@@ -78,11 +78,17 @@ SO THAT I can learn best practices and become healthier
 
 ### User Profile
 
-![User Profile]()
+![User Profile](https://i.imgur.com/TKggzqz.png)
+
+### Stripe Payment
+
+![Stripe](https://i.imgur.com/Een3TIZ.png)
+
 
 ## Deployed Application
 
-[A link to the deployed application can be found here!](https://peaceful-refuge-94626.herokuapp.com/courses)
+[A link to the deployed application can be found here!](https://peaceful-refuge-94626.herokuapp.com/)
+
 
 ## Developers
 - :computer: [Zachary Thomas](https://github.com/Sccr0123)
