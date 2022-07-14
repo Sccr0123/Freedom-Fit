@@ -72,7 +72,7 @@ const Home = () => {
                   </span>
                   <h4 className="card-title">Sign Up</h4>
                   <p className="card-text">Found your fit? Sign up here.</p>
-                  <Link to="/" className="btn btn-default text-uppercase">
+                  <Link to="/signup" className="btn btn-default text-uppercase">
                     Explore
                   </Link>
                 </div>
