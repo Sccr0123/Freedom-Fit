@@ -1,36 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@300&display=swap");
+
+:root {
+  --patriotic-blue: #0052a5;
+  --patriotic-white: #f4f7f5;
+  --patriotic-red: #e0162b;
+  --patriotic-black: #212121;
+}
+
 .cart {
-	z-index: 1;
-	position: fixed;
-	top: 0;
-	right: 0;
-	min-width: 20%;
-	max-width: 20%;
-	max-height: 60%;
-	background-color: white;
-	color: black;
-	overflow: auto;
-	padding: 0.5rem;
-	box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
-	border-bottom-left-radius: 0.5rem;
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  right: 0;
+  min-width: 20%;
+  max-width: 20%;
+  max-height: 60%;
+  background-color: white;
+  color: var(--patriotic-black);
+  overflow: auto;
+  padding: 0.5rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+  border-bottom-left-radius: 0.5rem;
+  font-family: "Saira Condensed", sans-serif, color;
 }
 
 .cart h2 {
-	font-size: 1.5rem;
-	border-bottom: 1px solid black;
-	padding-bottom: 0.5rem;
-	margin: 1rem 0;
+  font-size: 1.5rem;
+  border-bottom: 1px solid black;
+  padding-bottom: 0.5rem;
+  margin: 1rem 0;
+  font-family: "Saira Condensed", sans-serif, color;
+  color: var(--patriotic-black);
 }
 
 .cart .close {
-	position: absolute;
-	top: 0.5rem;
-	right: 0.5rem;
-	cursor: pointer;
-	color: var(--tertiary);
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  cursor: pointer;
+  color: var(--tertiary);
 }
 
 .cart .close:hover {
-	text-decoration: underline;
+  text-decoration: underline;
 }
 
 /* .cart-closed {
@@ -47,31 +59,31 @@
 } */
 
 .cart-closed:hover {
-	cursor: pointer;
+  cursor: pointer;
 }
 
 .cart img {
-	width: 70px;
-	margin-right: 1rem;
+  width: 70px;
+  margin-right: 1rem;
 }
 
 .cart input {
-	width: 50px;
-	padding: 0;
-	margin: 0 0.5rem 1rem 0;
+  width: 50px;
+  padding: 0;
+  margin: 0 0.5rem 1rem 0;
 }
 
 @media screen and (max-width: 768px) {
-	.cart {
-		position: relative;
-		max-width: 100%;
-		max-height: auto;
-		box-shadow: none;
-		background-color: inherit;
-	}
+  .cart {
+    position: relative;
+    max-width: 100%;
+    max-height: auto;
+    box-shadow: none;
+    background-color: inherit;
+  }
 
-	.cart-closed {
-		position: relative;
-		margin: 0 auto;
-	}
+  .cart-closed {
+    position: relative;
+    margin: 0 auto;
+  }
 }
