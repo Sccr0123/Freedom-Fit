@@ -2,15 +2,15 @@ const db = require("../config/connection");
 const { User, Course, Category, Order } = require("../models");
 
 db.once("open", async () => {
-	// await Category.deleteMany();
+	await Category.deleteMany();
 
-	// const categories = await Category.insertMany([
-	// 	{ name: "Physical Fitness" },
-	// 	{ name: "Mental Wellness" },
-	// 	{ name: "Nutrtion" },
-	// ]);
+	const categories = await Category.insertMany([
+		{ name: "Physical Fitness" },
+		{ name: "Mental Wellness" },
+		{ name: "Nutrtion" },
+	]);
 
-	// console.log("Categories seeded");
+	console.log("Categories seeded");
 
 	// await Course.deleteMany();
 
